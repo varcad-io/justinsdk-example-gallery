@@ -1,6 +1,6 @@
 use <../examples/daruma.scad>
-use <../src/arc.scad>
-use <../src/polyline_join.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/polyline_join.scad>
 
 text = "順暢";
 font = "思源黑體 Medium";

@@ -1,4 +1,4 @@
-use <../../../src/voronoi/_impl/_convex_intersection.scad>
+use <_convex_intersection.scad>
 
 function _convex_intersection_for_impl(shapes, pre, leng, i = 2) = 
     pre == [] || i == leng ? pre :

@@ -8,9 +8,9 @@
 *
 **/ 
  
-use <../src/__comm__/__angy_angz.scad>
-use <../src/__comm__/__to3d.scad>
-use <../src/matrix/m_rotation.scad>
+use <__comm__/__angy_angz.scad>
+use <__comm__/__to3d.scad>
+use <matrix/m_rotation.scad>
 
 module along_with(points, angles, twist = 0, scale = 1.0, method = "AXIS_ANGLE") {
     pts = len(points[0]) == 3 ? points : [for(p = points) __to3d(p)];

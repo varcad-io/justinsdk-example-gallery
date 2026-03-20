@@ -1,6 +1,6 @@
-use <../src/shape_pentagram.scad>
-use <../src/path_extrude.scad>
-use <../src/torus_knot.scad>
+use <@justinsdk/src/shape_pentagram.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/torus_knot.scad>
 
 p = 2;
 q = 3;

@@ -1,11 +1,11 @@
-use <../../src/archimedean_spiral.scad>
-use <../../src/curve.scad>
-use <../../src/along_with.scad>
+use <@justinsdk/src/archimedean_spiral.scad>
+use <@justinsdk/src/curve.scad>
+use <@justinsdk/src/along_with.scad>
 
 use <../../examples/dragon/dragon_head.scad>
 use <../../examples/dragon/dragon_scales.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/path_extrude.scad>
 use <../../examples/dragon/dragon_claw.scad>
 
 treble_clef_dragon();

@@ -1,10 +1,10 @@
-use <../../src/experimental/tile_penrose3.scad>
-use <../../src/experimental/ptf_c2sphere.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/polyline_join.scad>
-use <../../src/surface/sf_thickenT.scad>
-use <../../src/polyhedron_hull.scad>
-use <../../src/util/every.scad>
+use <@justinsdk/src/experimental/tile_penrose3.scad>
+use <@justinsdk/src/experimental/ptf_c2sphere.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/surface/sf_thickenT.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/util/every.scad>
 
 basket_radius = 40;
 radius_in_plane = basket_radius;

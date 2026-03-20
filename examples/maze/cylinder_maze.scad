@@ -1,6 +1,6 @@
-use <../../src/bend.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/bend.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
 
 radius = 30; 
 height = 60;

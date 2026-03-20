@@ -1,5 +1,5 @@
-use <../../src/sweep.scad>
-use <../../src/util/reverse.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/util/reverse.scad>
 
 thickness = 0.05;
 

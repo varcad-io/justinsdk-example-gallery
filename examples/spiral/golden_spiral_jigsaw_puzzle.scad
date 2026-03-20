@@ -1,7 +1,7 @@
-use <../../src/polyline_join.scad>
-use <../../src/util/radians.scad>
-use <../../src/util/lerp.scad>
-use <../../src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/util/radians.scad>
+use <@justinsdk/src/util/lerp.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
 
 spirals = 7;
 start_n = 1;   // spiral start from 360 / spirals * start_n

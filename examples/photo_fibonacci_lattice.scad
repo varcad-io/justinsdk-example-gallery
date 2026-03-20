@@ -1,4 +1,4 @@
-use <../src/experimental/fibonacci_lattice2.scad>
+use <@justinsdk/src/experimental/fibonacci_lattice2.scad>
 
 num_pts = 5000;
 thickness = 3;

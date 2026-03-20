@@ -1,7 +1,7 @@
-use <../src/util/degrees.scad>
-use <../src/polyline_join.scad>
-use <../src/bezier_curve.scad>
-use <../src/util/reverse.scad>
+use <@justinsdk/src/util/degrees.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/util/reverse.scad>
 
 radius = 10;
 thickness = .5;

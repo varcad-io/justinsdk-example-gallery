@@ -1,8 +1,8 @@
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/polyline2d.scad>
-use <../../src/noise/nz_perlin2.scad>
-use <../../src/util/choose.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/polyline2d.scad>
+use <@justinsdk/src/noise/nz_perlin2.scad>
+use <@justinsdk/src/util/choose.scad>
 
 rows = 30;
 columns = 30;

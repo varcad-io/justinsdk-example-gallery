@@ -1,4 +1,4 @@
-use <../../../src/util/_impl/_vt_default_comparator.scad>
+use <_vt_default_comparator.scad>
 
 function _bsearch_vt(sorted, elem, low, upper) =
     low > upper ? -1 :

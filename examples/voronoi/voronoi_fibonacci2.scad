@@ -1,7 +1,7 @@
-use <../../src/noise/nz_cell.scad>
-use <../../src/golden_spiral.scad>
-use <../../src/surface/sf_thicken.scad>
-use <../../src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/noise/nz_cell.scad>
+use <@justinsdk/src/golden_spiral.scad>
+use <@justinsdk/src/surface/sf_thicken.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
 
 size = [150, 150];
 thickness = 5;

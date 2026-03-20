@@ -1,6 +1,6 @@
-use <../../../src/hull_polyline2d.scad>
-use <../../../src/ptf/ptf_rotate.scad>
-use <../../../src/shape_square.scad>
+use <hull_polyline2d.scad>
+use <ptf/ptf_rotate.scad>
+use <shape_square.scad>
 use <experimental/convex_intersection.scad>
 
 sq1 = shape_square(size = 10, corner_r = 3, $fn = 12);

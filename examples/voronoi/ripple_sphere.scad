@@ -1,7 +1,7 @@
-use <../../src/util/rand.scad>
-use <../../src/polyhedra/geom_icosahedron.scad>
-use <../../src/noise/nz_worley3.scad>
-use <../../src/noise/nz_perlin3.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/polyhedra/geom_icosahedron.scad>
+use <@justinsdk/src/noise/nz_worley3.scad>
+use <@justinsdk/src/noise/nz_perlin3.scad>
 
 radius = 150;
 detail = 30;

@@ -1,10 +1,10 @@
-use <../../src/experimental/foliage_scroll.scad>
-use <../../src/polyline_join.scad>
-use <../../src/stereographic_extrude.scad>
-use <../../src/sweep.scad>
-use <../../src/util/choose.scad>
-use <../../src/util/reverse.scad>
-// use <../../src/surface/sf_hull.scad>
+use <@justinsdk/src/experimental/foliage_scroll.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/stereographic_extrude.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/util/choose.scad>
+use <@justinsdk/src/util/reverse.scad>
+// use <@justinsdk/src/surface/sf_hull.scad>
 
 $fn = 12;
 width = 150;

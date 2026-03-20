@@ -1,9 +1,9 @@
-use <../../src/torus_knot.scad>
-use <../../src/cross_sections.scad>
-use <../../src/shape_circle.scad>
-use <../../src/shape_pentagram.scad>
-use <../../src/experimental/tri_bisectors.scad>
-use <../../src/experimental/hollow_out_sweep.scad>
+use <@justinsdk/src/torus_knot.scad>
+use <@justinsdk/src/cross_sections.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/shape_pentagram.scad>
+use <@justinsdk/src/experimental/tri_bisectors.scad>
+use <@justinsdk/src/experimental/hollow_out_sweep.scad>
 
 p = 2;
 q = 3;

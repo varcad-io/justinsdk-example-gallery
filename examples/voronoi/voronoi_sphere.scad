@@ -1,9 +1,9 @@
-use <../../src/voronoi/vrn_sphere.scad>
-use <../../src/polyline_join.scad>
-use <../../src/sweep.scad>
-use <../../src/fibonacci_lattice.scad>
-use <../../src/experimental/convex_centroid.scad>
-use <../../src/pp/pp_sphere.scad>
+use <@justinsdk/src/voronoi/vrn_sphere.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/fibonacci_lattice.scad>
+use <@justinsdk/src/experimental/convex_centroid.scad>
+use <@justinsdk/src/pp/pp_sphere.scad>
 
 n = 60;
 radius = 5;

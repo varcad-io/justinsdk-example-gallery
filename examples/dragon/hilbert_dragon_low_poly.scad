@@ -1,10 +1,10 @@
-use <../../src/bezier_smooth.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/ellipse_extrude.scad>
-use <../../src/path_extrude.scad>
-use <../../src/util/reverse.scad>
-use <../../src/util/dedup.scad>
-use <../../src/turtle/lsystem3.scad>
+use <@justinsdk/src/bezier_smooth.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/util/reverse.scad>
+use <@justinsdk/src/util/dedup.scad>
+use <@justinsdk/src/turtle/lsystem3.scad>
 use <../../examples/dragon/dragon_head_low_poly.scad>
 
 hilbert_dragon_low_poly();

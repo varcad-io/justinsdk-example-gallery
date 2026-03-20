@@ -1,6 +1,6 @@
-use <../../src/triangle/tri_delaunay.scad>
-use <../../src/shape_taiwan.scad>
-use <../../src/in_shape.scad>
+use <@justinsdk/src/triangle/tri_delaunay.scad>
+use <@justinsdk/src/shape_taiwan.scad>
+use <@justinsdk/src/in_shape.scad>
 
 voronoi_taiwan();
 

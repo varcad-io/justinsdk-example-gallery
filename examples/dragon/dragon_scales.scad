@@ -1,8 +1,8 @@
-use <../../src/shape_circle.scad>
-use <../../src/shear.scad>
-use <../../src/polyhedron_hull.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/experimental/convex_hull3.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/shear.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/experimental/convex_hull3.scad>
 
 function one_body_scale(body_r, body_fn, scale_fn, scale_tilt_a) =  
     let(

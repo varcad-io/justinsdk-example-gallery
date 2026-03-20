@@ -1,7 +1,7 @@
-use <../../src/polyline_join.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/ptf/ptf_ring.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/ptf/ptf_ring.scad>
 
 rows = 48;
 columns = 8;

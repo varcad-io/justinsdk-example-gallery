@@ -1,13 +1,13 @@
-use <../../src/torus_knot.scad>
-use <../../src/along_with.scad>
-use <../../src/util/reverse.scad>
+use <@justinsdk/src/torus_knot.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/util/reverse.scad>
 use <../../examples/dragon/dragon_head.scad>
 use <../../examples/dragon/dragon_scales.scad>
 use <../../examples/dragon/dragon_foot.scad> 
-use <../../src/fibonacci_lattice.scad>
-use <../../src/polyhedron_hull.scad>
-use <../../src/path_extrude.scad>
-use <../../src/bezier_curve.scad>
+use <@justinsdk/src/fibonacci_lattice.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
 
 torus_knot_dragon_and_pearl();
 

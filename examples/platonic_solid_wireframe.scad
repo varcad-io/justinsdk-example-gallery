@@ -1,11 +1,11 @@
-use <../src/util/map/hashmap.scad>
-use <../src/util/map/hashmap_get.scad>
-use <../src/polyhedra/geom_tetrahedron.scad>
-use <../src/polyhedra/geom_hexahedron.scad>
-use <../src/polyhedra/geom_octahedron.scad>
-use <../src/polyhedra/geom_dodecahedron.scad>
-use <../src/polyhedra/geom_icosahedron.scad>
-use <../src/experimental/wireframe.scad>
+use <@justinsdk/src/util/map/hashmap.scad>
+use <@justinsdk/src/util/map/hashmap_get.scad>
+use <@justinsdk/src/polyhedra/geom_tetrahedron.scad>
+use <@justinsdk/src/polyhedra/geom_hexahedron.scad>
+use <@justinsdk/src/polyhedra/geom_octahedron.scad>
+use <@justinsdk/src/polyhedra/geom_dodecahedron.scad>
+use <@justinsdk/src/polyhedra/geom_icosahedron.scad>
+use <@justinsdk/src/experimental/wireframe.scad>
 
 number_of_faces = 8; // [3, 6, 8, 12, 20]
 radius = 10;

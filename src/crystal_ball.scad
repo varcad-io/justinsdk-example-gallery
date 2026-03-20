@@ -8,11 +8,11 @@
 *
 **/ 
 
-use <../src/__comm__/__nearest_multiple_of_4.scad>
-use <../src/__comm__/__frags.scad>
-use <../src/shape_arc.scad>
-use <../src/shape_pie.scad>
-use <../src/ring_extrude.scad>
+use <__comm__/__nearest_multiple_of_4.scad>
+use <__comm__/__frags.scad>
+use <shape_arc.scad>
+use <shape_pie.scad>
+use <ring_extrude.scad>
 
 module crystal_ball(radius, theta = 360, phi = 180, thickness) {
     phis = is_num(phi) ? [0, phi] : phi;

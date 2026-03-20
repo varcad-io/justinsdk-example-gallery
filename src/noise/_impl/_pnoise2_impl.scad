@@ -1,4 +1,4 @@
-use <../../../src/noise/_impl/_pnoise_comm.scad>
+use <_pnoise_comm.scad>
 use <../../util/lerp.scad>
 
 _signs = [[0, 1], [1, 1], [1, 0], [1, -1], [0, -1], [-1, -1], [-1, 0], [-1, 1]];

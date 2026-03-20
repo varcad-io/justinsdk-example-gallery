@@ -1,11 +1,11 @@
-use <../../src/fibonacci_lattice.scad>
-use <../../src/shape_superformula.scad>   
-use <../../src/ring_extrude.scad>
-use <../../src/polyhedron_hull.scad>
-use <../../src/curve.scad>
-use <../../src/polyline_join.scad>
-use <../../src/voronoi/vrn_sphere.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/fibonacci_lattice.scad>
+use <@justinsdk/src/shape_superformula.scad>   
+use <@justinsdk/src/ring_extrude.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/curve.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/voronoi/vrn_sphere.scad>
+use <@justinsdk/src/util/rand.scad>
 
 model = "BOTH"; // ["PINAPPLE", "RUYI", "BOTH"]
 

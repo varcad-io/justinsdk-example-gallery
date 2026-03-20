@@ -1,6 +1,6 @@
 // The math of the shells: https://www.youtube.com/watch?v=pKHWzmxw_NI
 
-use <../../src/surface/sf_thickenT.scad>
+use <@justinsdk/src/surface/sf_thickenT.scad>
 
 alpha = 85; 
 beta = 5;

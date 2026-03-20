@@ -1,6 +1,6 @@
-use <../src/rounded_square.scad>
-use <../src/part/joint_T.scad>
-use <../src/shape_taiwan.scad>
+use <@justinsdk/src/rounded_square.scad>
+use <@justinsdk/src/part/joint_T.scad>
+use <@justinsdk/src/shape_taiwan.scad>
 
 rows = 3; // [2:100]
 cube_width = 20;

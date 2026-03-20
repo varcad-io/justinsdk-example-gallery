@@ -1,5 +1,5 @@
-use <../../src/voxel/vx_gray.scad>
-use <../../src/shape_taiwan.scad>
+use <@justinsdk/src/voxel/vx_gray.scad>
+use <@justinsdk/src/shape_taiwan.scad>
 
 levels = [
 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 42, 30, 40, 32, 22, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

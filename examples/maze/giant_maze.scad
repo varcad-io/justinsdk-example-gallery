@@ -1,8 +1,8 @@
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_tiles.scad>
-use <../../src/util/find_index.scad>
-use <../../src/voronoi/vrn2_cells_space.scad>
-use <../../src/noise/nz_perlin2.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_tiles.scad>
+use <@justinsdk/src/util/find_index.scad>
+use <@justinsdk/src/voronoi/vrn2_cells_space.scad>
+use <@justinsdk/src/noise/nz_perlin2.scad>
 
 rows = 5;
 columns = 5;

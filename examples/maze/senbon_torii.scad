@@ -1,4 +1,4 @@
-use <../../src/maze/mz_hamiltonian.scad>
+use <@justinsdk/src/maze/mz_hamiltonian.scad>
 
 rows = 2;
 columns = 2;

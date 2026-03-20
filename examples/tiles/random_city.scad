@@ -1,6 +1,6 @@
-use <../../src/util/rand.scad>
-use <../../src/experimental/tile_w2e.scad>
-use <../../src/select.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/experimental/tile_w2e.scad>
+use <@justinsdk/src/select.scad>
 use <../../examples/tiles/city_tile.scad>
 
 mask = [

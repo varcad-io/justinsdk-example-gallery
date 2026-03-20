@@ -1,4 +1,4 @@
-use <../../src/experimental/_impl/Gyroid3.scad>
+use <_impl/Gyroid3.scad>
 
 module gyroid(detail, thickness, period) {
 	pp = 2 + detail;										

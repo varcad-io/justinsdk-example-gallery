@@ -1,5 +1,5 @@
-use <../../src/experimental/tile_wfc.scad>
-use <../../src/select.scad>
+use <@justinsdk/src/experimental/tile_wfc.scad>
+use <@justinsdk/src/select.scad>
 
 sample = [
     [ 6, 12,  0,  0,  0,  0,  0,  0, 0,   6, 12],

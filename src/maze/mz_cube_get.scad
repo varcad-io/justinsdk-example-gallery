@@ -1,4 +1,4 @@
-include <../../src/maze/_impl/_mz_cube_constants.scad>
+include <_impl/_mz_cube_constants.scad>
 
 function mz_cube_get(cell, query) = 
     let(

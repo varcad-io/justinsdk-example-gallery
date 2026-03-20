@@ -1,5 +1,5 @@
-use <../src/voxel/vx_circle.scad>
-use <../src/voxel/vx_polygon.scad>
+use <@justinsdk/src/voxel/vx_circle.scad>
+use <@justinsdk/src/voxel/vx_polygon.scad>
 
 w = 5;
 merged_dino = false;

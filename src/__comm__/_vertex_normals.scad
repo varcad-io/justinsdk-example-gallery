@@ -1,5 +1,5 @@
 
-use <../../src/__comm__/_face_normal.scad>
+use <_face_normal.scad>
 use <../util/sum.scad>
 use <../util/contains.scad>
 

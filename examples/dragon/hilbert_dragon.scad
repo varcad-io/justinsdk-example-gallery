@@ -1,13 +1,13 @@
-use <../../src/along_with.scad>
-use <../../src/bezier_smooth.scad>
-use <../../src/util/reverse.scad>
-use <../../src/util/dedup.scad>
-use <../../src/turtle/lsystem3.scad>
-use <../../src/curve.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/bezier_smooth.scad>
+use <@justinsdk/src/util/reverse.scad>
+use <@justinsdk/src/util/dedup.scad>
+use <@justinsdk/src/turtle/lsystem3.scad>
+use <@justinsdk/src/curve.scad>
 use <../../examples/dragon/dragon_head.scad>
 use <../../examples/dragon/dragon_scales.scad>
-use <../../src/path_extrude.scad>
-use <../../src/bezier_curve.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
 
 hilbert_dragon();
 

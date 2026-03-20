@@ -1,5 +1,5 @@
-use <../../src/hollow_out.scad>
-use <../../src/part/cone.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/part/cone.scad>
 
 module floor_stand(width, height, thickness, spacing) {
     half_w = width / 2;

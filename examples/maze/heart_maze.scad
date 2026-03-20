@@ -1,9 +1,9 @@
-use <../../src/line2d.scad>
-use <../../src/hollow_out.scad>
-use <../../src/ellipse_extrude.scad>
-use <../../src/arc.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_square_get.scad>
+use <@justinsdk/src/line2d.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_square_get.scad>
 
 radius_of_heart = 12;
 height_of_heart = 25;

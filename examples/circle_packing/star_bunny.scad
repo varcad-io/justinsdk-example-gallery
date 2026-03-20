@@ -1,5 +1,5 @@
-use <../../src/polyhedra/star.scad>
-use <../../src/experimental/tri_circle_packing.scad>
+use <@justinsdk/src/polyhedra/star.scad>
+use <@justinsdk/src/experimental/tri_circle_packing.scad>
 
 star_burst_n = 5;
 min_star_r = .5;

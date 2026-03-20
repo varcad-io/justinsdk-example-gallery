@@ -1,4 +1,4 @@
-use <../../src/polyline_join.scad>
+use <@justinsdk/src/polyline_join.scad>
 
 leng = 50;
 diameter = 5;

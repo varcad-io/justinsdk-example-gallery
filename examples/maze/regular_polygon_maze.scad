@@ -1,7 +1,7 @@
-use <../../src/line2d.scad>
-use <../../src/hollow_out.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_square_get.scad>
+use <@justinsdk/src/line2d.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_square_get.scad>
 
 // only for creating a small maze
 

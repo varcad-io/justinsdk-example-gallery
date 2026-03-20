@@ -1,5 +1,5 @@
-use <../src/noise/nz_worley3s.scad>
-use <../src/sweep.scad>
+use <@justinsdk/src/noise/nz_worley3s.scad>
+use <@justinsdk/src/sweep.scad>
 
 radius = 25;
 a_step = 5;

@@ -8,7 +8,7 @@
 *
 **/
 
-include <../../src/maze/_impl/_mz_square_cell_constants.scad>
+include <_impl/_mz_square_cell_constants.scad>
 
 function mz_square_get(cell, query) = 
     let(

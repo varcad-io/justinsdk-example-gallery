@@ -1,7 +1,7 @@
-use <../../src/bezier_smooth.scad>
-use <../../src/polyline_join.scad>
-use <../../src/util/dedup.scad>
-use <../../src/turtle/lsystem3.scad>
+use <@justinsdk/src/bezier_smooth.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/util/dedup.scad>
+use <@justinsdk/src/turtle/lsystem3.scad>
 
 diameter = 0.3;
 corner_r = 0.5;

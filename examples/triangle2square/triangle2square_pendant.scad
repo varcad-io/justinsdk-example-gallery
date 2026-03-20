@@ -1,5 +1,5 @@
-use <../../src/hollow_out.scad>
-use <../../src/part/joint_T.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/part/joint_T.scad>
 use <../../examples/triangle2square/triangle2square.scad>
 
 tri_side_leng = 45;

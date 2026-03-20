@@ -1,4 +1,4 @@
-use <../../src/util/choose.scad>
+use <util/choose.scad>
 
 function tile_truchet(size, mask, seed) =
     let(

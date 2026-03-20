@@ -1,6 +1,6 @@
-use <../../src/line2d.scad>
-use <../../src/arc.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/line2d.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/util/rand.scad>
 
 number_of_circles = 15;
 minimum_radius = 3;

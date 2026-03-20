@@ -1,4 +1,4 @@
-use <../../src/box_extrude.scad>
+use <@justinsdk/src/box_extrude.scad>
 
 /* [Basic] */
 

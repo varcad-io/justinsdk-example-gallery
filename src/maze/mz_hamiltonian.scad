@@ -8,10 +8,10 @@
 *
 **/
 
-use <../../src/maze/_impl/_mz_hamiltonian_impl.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_square_initialize.scad>
-use <../../src/maze/mz_square_get.scad>
+use <_impl/_mz_hamiltonian_impl.scad>
+use <mz_square.scad>
+use <mz_square_initialize.scad>
+use <mz_square_get.scad>
 use <../util/set/hashset.scad>
 use <../util/set/hashset_elems.scad>
 

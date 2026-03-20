@@ -1,8 +1,8 @@
-use <../../src/golden_spiral.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/triangle/tri_delaunay.scad>
-use <../../src/triangle/tri_incenter.scad>
-use <../../src/util/dedup.scad>
+use <@justinsdk/src/golden_spiral.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/triangle/tri_delaunay.scad>
+use <@justinsdk/src/triangle/tri_incenter.scad>
+use <@justinsdk/src/util/dedup.scad>
 
 spirals = 2; 
 tri_thickness = 2;

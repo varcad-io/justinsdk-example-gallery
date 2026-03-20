@@ -1,4 +1,4 @@
-use <../../src/shape_star.scad>
+use <@justinsdk/src/shape_star.scad>
 
 model = "STAR"; // [STAR, BASE, BOTH]
 r1 = 12;

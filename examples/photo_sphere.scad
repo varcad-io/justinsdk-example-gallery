@@ -1,4 +1,4 @@
-use <../src/surface/sf_sphere.scad>
+use <@justinsdk/src/surface/sf_sphere.scad>
 
 radius = 50;
 thickness = 10;

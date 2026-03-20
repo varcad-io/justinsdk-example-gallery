@@ -1,8 +1,8 @@
-use <../../src/golden_spiral.scad>
-use <../../src/sweep.scad>
-use <../../src/noise/nz_worley3.scad>
-use <../../src/shape_circle.scad>
-use <../../src/matrix/m_rotation.scad>
+use <@justinsdk/src/golden_spiral.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/noise/nz_worley3.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/matrix/m_rotation.scad>
 
 quarter = 1;
 detail = 4;

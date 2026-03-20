@@ -8,10 +8,10 @@
 *
 **/
 
-use <../src/__comm__/__frags.scad>
-use <../src/helix.scad>
-use <../src/cross_sections.scad>
-use <../src/sweep.scad>
+use <__comm__/__frags.scad>
+use <helix.scad>
+use <cross_sections.scad>
+use <sweep.scad>
 
 module helix_extrude(shape_pts, radius, levels, level_dist, 
                      vt_dir = "SPI_DOWN", rt_dir = "CT_CLK", 

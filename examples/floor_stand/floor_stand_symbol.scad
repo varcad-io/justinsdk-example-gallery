@@ -1,6 +1,6 @@
-use <../../src/util/split_str.scad>
-use <../../src/multi_line_text.scad>
-use <../../src/shape_taiwan.scad>
+use <@justinsdk/src/util/split_str.scad>
+use <@justinsdk/src/multi_line_text.scad>
+use <@justinsdk/src/shape_taiwan.scad>
 use <../../examples/floor_stand/floor_stand.scad>
 
 text = " Taiwan";

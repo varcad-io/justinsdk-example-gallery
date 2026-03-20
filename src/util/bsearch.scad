@@ -8,7 +8,7 @@
 *
 **/
 
-use <../../src/util/_impl/_bsearch_impl.scad>
+use <_impl/_bsearch_impl.scad>
 
 function bsearch(sorted, target) = 
     echo("bsearch is deprecated. use util/binary_search instead.")

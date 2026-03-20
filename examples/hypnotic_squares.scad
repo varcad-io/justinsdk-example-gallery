@@ -1,6 +1,6 @@
-use <../src/hollow_out.scad>
-use <../src/bend_extrude.scad>
-use <../src/box_extrude.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/bend_extrude.scad>
+use <@justinsdk/src/box_extrude.scad>
 
 x_grids = 12;
 y_grids = 5;

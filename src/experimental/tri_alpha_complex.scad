@@ -1,12 +1,12 @@
-include <../../src/__comm__/_pt2_hash.scad>
-use <../../src/triangle/tri_delaunay.scad>
-use <../../src/triangle/tri_delaunay_indices.scad>
-use <../../src/triangle/tri_circumcenter.scad>
-use <../../src/util/map/hashmap.scad>
-use <../../src/util/map/hashmap_get.scad>
-use <../../src/util/map/hashmap_put.scad>
-use <../../src/util/map/hashmap_entries.scad>
-use <../../src/util/has.scad>
+include <__comm__/_pt2_hash.scad>
+use <triangle/tri_delaunay.scad>
+use <triangle/tri_delaunay_indices.scad>
+use <triangle/tri_circumcenter.scad>
+use <util/map/hashmap.scad>
+use <util/map/hashmap_get.scad>
+use <util/map/hashmap_put.scad>
+use <util/map/hashmap_entries.scad>
+use <util/has.scad>
 
 function circumcircle_rr(shape_pts) =
    let(

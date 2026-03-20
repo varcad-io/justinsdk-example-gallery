@@ -1,4 +1,4 @@
-use <../../../src/triangle/_impl/_tri_delaunay_comm_impl.scad>
+use <_tri_delaunay_comm_impl.scad>
 use <../tri_circumcenter.scad>
 use <../../util/map/hashmap.scad>
 use <../../util/map/hashmap_get.scad>

@@ -1,5 +1,5 @@
-use <../src/shape_liquid_splitting.scad>
-use <../src/ring_extrude.scad>
+use <@justinsdk/src/shape_liquid_splitting.scad>
+use <@justinsdk/src/ring_extrude.scad>
 
 $fn = 48;
 r = 100;

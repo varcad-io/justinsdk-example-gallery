@@ -1,6 +1,6 @@
-use <../../src/polyline_join.scad>
-use <../../src/turtle/t3d.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/turtle/t3d.scad>
+use <@justinsdk/src/util/rand.scad>
 
 trunk_leng = 50;
 branch_scale = 0.7;

@@ -1,6 +1,6 @@
-use <../../src/rounded_square.scad>
-use <../../src/util/choose.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/rounded_square.scad>
+use <@justinsdk/src/util/choose.scad>
+use <@justinsdk/src/util/rand.scad>
 
 width = 25;
 rows = 1;

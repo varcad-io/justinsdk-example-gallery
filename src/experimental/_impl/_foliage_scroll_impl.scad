@@ -1,4 +1,4 @@
-use <../../../src/util/count.scad>
+use <util/count.scad>
 
 MAX_ANGLE = 720;
 

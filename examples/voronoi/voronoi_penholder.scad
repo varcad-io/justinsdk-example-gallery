@@ -1,6 +1,6 @@
-use <../../src/voronoi/vrn2_space.scad>
-use <../../src/bend_extrude.scad>
-use <../../src/arc.scad>
+use <@justinsdk/src/voronoi/vrn2_space.scad>
+use <@justinsdk/src/bend_extrude.scad>
+use <@justinsdk/src/arc.scad>
 
 size = [300, 120];
 grid_w = 30;

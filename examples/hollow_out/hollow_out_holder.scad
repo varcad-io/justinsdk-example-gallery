@@ -1,5 +1,5 @@
-use <../../src/polyline_join.scad>
-use <../../src/ptf/ptf_bend.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/ptf/ptf_bend.scad>
 use <../../examples/hollow_out/hollow_out_square.scad>
 
 width = 5;

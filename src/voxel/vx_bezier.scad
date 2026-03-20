@@ -10,7 +10,7 @@
 
 use <../__comm__/__to2d.scad>
 use <../__comm__/__to3d.scad>
-use <../../src/voxel/_impl/_vx_bezier_impl.scad>
+use <_impl/_vx_bezier_impl.scad>
 use <../util/dedup.scad>
 
 include <../__comm__/_pt2_hash.scad>

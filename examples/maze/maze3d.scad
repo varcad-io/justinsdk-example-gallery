@@ -1,7 +1,7 @@
-use <../../src/maze/mz_cube.scad>
-use <../../src/maze/mz_cube_get.scad>
-use <../../src/util/contains.scad>
-use <../../src/crystal_ball.scad>
+use <@justinsdk/src/maze/mz_cube.scad>
+use <@justinsdk/src/maze/mz_cube_get.scad>
+use <@justinsdk/src/util/contains.scad>
+use <@justinsdk/src/crystal_ball.scad>
 
 layers = 4;
 rows = 4;

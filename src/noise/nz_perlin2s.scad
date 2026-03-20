@@ -9,7 +9,7 @@
 **/
 
 use <../util/rand.scad>
-use <../../src/noise/_impl/_pnoise2_impl.scad>
+use <_impl/_pnoise2_impl.scad>
 
 function nz_perlin2s(points, seed) = 
     let(sd = is_undef(seed) ? rand() * 1000 : seed)

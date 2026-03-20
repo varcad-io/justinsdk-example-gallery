@@ -1,11 +1,11 @@
-use <../../src/polyline_join.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/path_extrude.scad>
-use <../../src/torus_knot.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/shape_square.scad>
-use <../../src/util/spherical_coordinate.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/torus_knot.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/shape_square.scad>
+use <@justinsdk/src/util/spherical_coordinate.scad>
 
 p = 2;
 q = 3;

@@ -1,6 +1,6 @@
-use <../../src/polyline_join.scad>
-use <../../src/hollow_out.scad>
-use <../../src/turtle/t2d.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/turtle/t2d.scad>
 
 radius = 40;
 height = 3;

@@ -1,4 +1,4 @@
-use <../../src/line3d.scad>
+use <@justinsdk/src/line3d.scad>
 
 /* [Basic] */
 

@@ -8,7 +8,7 @@
 *
 **/ 
 
-use <../../src/util/_impl/_sort_impl.scad>
+use <_impl/_sort_impl.scad>
 
 function sort(lt, by = "idx", idx = 0) = 
     echo("sort is deprecated. use util/sorted instead.")

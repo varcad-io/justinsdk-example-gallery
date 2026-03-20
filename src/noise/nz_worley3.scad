@@ -9,7 +9,7 @@
 **/
 
 use <../util/rand.scad>
-use <../../src/noise/_impl/_nz_worley3_impl.scad>
+use <_impl/_nz_worley3_impl.scad>
 
 function nz_worley3(x, y, z, seed, grid_w = 10, dist = "euclidean") =
     _nz_worley3([x, y, z], seed, grid_w, dist);

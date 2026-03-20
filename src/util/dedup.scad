@@ -8,7 +8,7 @@
 *
 **/ 
 
-use <../../src/util/_impl/_dedup_impl.scad>
+use <_impl/_dedup_impl.scad>
 
 include <../__comm__/_str_hash.scad>
 		

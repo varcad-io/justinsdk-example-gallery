@@ -1,5 +1,5 @@
 use <../../lines_intersection.scad>
-use <../../../src/voronoi/_impl/_convex_ct_clk_order.scad>
+use <_convex_ct_clk_order.scad>
 use <../../util/set/hashset.scad>
 use <../../util/set/hashset_elems.scad>
 

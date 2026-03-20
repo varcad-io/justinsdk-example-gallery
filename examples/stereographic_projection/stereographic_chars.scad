@@ -1,4 +1,4 @@
-use <../../src/stereographic_extrude.scad>
+use <@justinsdk/src/stereographic_extrude.scad>
 
 txt = "";
 square_size = 100;

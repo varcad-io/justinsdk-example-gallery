@@ -1,5 +1,5 @@
 use <../../util/sorted.scad>
-use <../../../src/voronoi/_impl/_convex_centroid.scad>
+use <_convex_centroid.scad>
 
 function _convex_ct_clk_order(points) =
     let(cpt = _convex_centroid(points))

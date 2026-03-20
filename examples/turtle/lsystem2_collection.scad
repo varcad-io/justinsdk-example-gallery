@@ -1,6 +1,6 @@
-use <../../src/turtle/lsystem2.scad>
-use <../../src/util/dedup.scad>
-use <../../src/line2d.scad>
+use <@justinsdk/src/turtle/lsystem2.scad>
+use <@justinsdk/src/util/dedup.scad>
+use <@justinsdk/src/line2d.scad>
 
 for(line = dedup(fern())) {
     line2d(

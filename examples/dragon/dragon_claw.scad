@@ -1,6 +1,6 @@
-use <../../src/curve.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/util/dedup.scad>
+use <@justinsdk/src/curve.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/util/dedup.scad>
 
 module dragon_claw() {
 	pts = [

@@ -1,13 +1,13 @@
-use <../src/shape_circle.scad>
-use <../src/midpt_smooth.scad>
-use <../src/polyline_join.scad>
-use <../src/in_shape.scad>
-use <../src/polyhedra/icosahedron.scad>
-use <../src/triangle/tri_delaunay.scad>
-use <../src/triangle/tri_incenter.scad>
-use <../src/surface/sf_thickenT.scad>
-use <../src/experimental/differential_line_growth.scad>
-use <../src/experimental/ptf_c2sphere.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/midpt_smooth.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/in_shape.scad>
+use <@justinsdk/src/polyhedra/icosahedron.scad>
+use <@justinsdk/src/triangle/tri_delaunay.scad>
+use <@justinsdk/src/triangle/tri_incenter.scad>
+use <@justinsdk/src/surface/sf_thickenT.scad>
+use <@justinsdk/src/experimental/differential_line_growth.scad>
+use <@justinsdk/src/experimental/ptf_c2sphere.scad>
 
 $fn = 24;
 r = 10;

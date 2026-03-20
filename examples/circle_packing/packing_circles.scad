@@ -1,5 +1,5 @@
-use <../../src/util/rand.scad>
-use <../../src/experimental/circle_packing.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/experimental/circle_packing.scad>
 
 size = [200, 100];
 min_radius = 1;

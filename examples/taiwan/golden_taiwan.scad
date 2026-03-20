@@ -1,10 +1,10 @@
-use <../../src/shape_taiwan.scad>
-use <../../src/golden_spiral.scad>
-use <../../src/golden_spiral_extrude.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/util/reverse.scad>
-use <../../src/surface/sf_splines.scad>
-use <../../src/surface/sf_solidify.scad>
+use <@justinsdk/src/shape_taiwan.scad>
+use <@justinsdk/src/golden_spiral.scad>
+use <@justinsdk/src/golden_spiral_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/util/reverse.scad>
+use <@justinsdk/src/surface/sf_splines.scad>
+use <@justinsdk/src/surface/sf_solidify.scad>
 
 // smaller values are better
 taiwan_fineness = 5;  

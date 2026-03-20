@@ -1,7 +1,7 @@
-use <../../src/along_with.scad>
-use <../../src/polyhedron_hull.scad>
-use <../../src/maze/mz_theta.scad>
-use <../../src/maze/mz_theta_get.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/maze/mz_theta.scad>
+use <@justinsdk/src/maze/mz_theta_get.scad>
 
 rings = 4;
 begining_columns = 6;

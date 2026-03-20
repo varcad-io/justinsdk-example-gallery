@@ -1,5 +1,5 @@
 use <../../examples/maze/regular_polygon_maze.scad>
-use <../../src/hollow_out.scad>
+use <@justinsdk/src/hollow_out.scad>
 
 ccells = 8; 
 wall_thickness = 1.5;

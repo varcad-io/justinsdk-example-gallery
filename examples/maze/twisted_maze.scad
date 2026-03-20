@@ -1,8 +1,8 @@
-use <../../src/polyline_join.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/ptf/ptf_x_twist.scad>
-use <../../src/ptf/ptf_y_twist.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/ptf/ptf_x_twist.scad>
+use <@justinsdk/src/ptf/ptf_y_twist.scad>
 
 rows = 10;
 columns = 10;

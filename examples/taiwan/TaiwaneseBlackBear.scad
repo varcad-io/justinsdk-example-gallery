@@ -1,8 +1,8 @@
-use <../../src/shape_taiwan.scad>
-use <../../src/voxel/vx_polyline.scad>
-use <../../src/voxel/vx_sphere.scad>
-use <../../src/voxel/vx_cylinder.scad>
-use <../../src/voxel/vx_polygon.scad>
+use <@justinsdk/src/shape_taiwan.scad>
+use <@justinsdk/src/voxel/vx_polyline.scad>
+use <@justinsdk/src/voxel/vx_sphere.scad>
+use <@justinsdk/src/voxel/vx_cylinder.scad>
+use <@justinsdk/src/voxel/vx_polygon.scad>
 
 module blocks(points) {
     for(pt = points) {

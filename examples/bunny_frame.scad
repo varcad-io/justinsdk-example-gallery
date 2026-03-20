@@ -1,4 +1,4 @@
-use <../src/experimental/wireframe.scad>
+use <@justinsdk/src/experimental/wireframe.scad>
 
 deep = 1;
 thickness = .5;

@@ -1,4 +1,4 @@
-use <../src/crystal_ball.scad>
+use <@justinsdk/src/crystal_ball.scad>
 
 radius = 15;
 

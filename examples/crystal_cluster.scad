@@ -1,7 +1,7 @@
-use <../src/shape_pie.scad>
-use <../src/polyhedron_hull.scad>
-use <../src/util/rand.scad>
-use <../src/experimental/worley_sphere.scad>
+use <@justinsdk/src/shape_pie.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/experimental/worley_sphere.scad>
 
 base_r = 10;
 crystals = 10;

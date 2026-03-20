@@ -8,8 +8,8 @@
 *
 **/
 
-use <../src/util/degrees.scad>
-use <../src/util/radians.scad>
+use <util/degrees.scad>
+use <util/radians.scad>
 
 function bauer_spiral(n, radius = 1, rt_dir = "CT_CLK") = 
     let(

@@ -1,7 +1,7 @@
-use <../../src/golden_spiral.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/hollow_out.scad>
-use <../../src/voronoi/vrn2_cells_from.scad>
+use <@justinsdk/src/golden_spiral.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/voronoi/vrn2_cells_from.scad>
 
 spirals = 2;     // [2:]
 line_thickness = .5;

@@ -1,7 +1,7 @@
-use <../../src/maze/mz_square_initialize.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_tiles.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/maze/mz_square_initialize.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_tiles.scad>
+use <@justinsdk/src/util/rand.scad>
 use <../tiles/city_tile.scad>
 
 rows = 10;

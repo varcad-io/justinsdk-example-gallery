@@ -1,6 +1,6 @@
-use <../src/arc.scad>
-use <../src/pie.scad>
-use <../src/hollow_out.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/pie.scad>
+use <@justinsdk/src/hollow_out.scad>
 
 $fn = 96;
 

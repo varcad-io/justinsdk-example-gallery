@@ -1,4 +1,4 @@
-use <../../src/polyline_join.scad>
+use <@justinsdk/src/polyline_join.scad>
 
 length = 100;
 diff_scale = 0.125;

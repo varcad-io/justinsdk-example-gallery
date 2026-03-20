@@ -1,5 +1,5 @@
-use <../../src/hollow_out.scad>
-use <../../src/archimedean_spiral.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/archimedean_spiral.scad>
 
 head_size = 26;
 segments = 99; 

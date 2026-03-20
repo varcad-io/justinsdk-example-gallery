@@ -1,5 +1,5 @@
-use <../../src/util/rand.scad>
-use <../../src/experimental/tri_bisectors.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/experimental/tri_bisectors.scad>
 
 function h_lines_in_square(width) = 
     let(

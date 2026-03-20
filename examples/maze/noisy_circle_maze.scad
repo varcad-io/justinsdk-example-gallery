@@ -1,9 +1,9 @@
-use <../../src/polyline_join.scad>
-use <../../src/util/rand.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/ptf/ptf_circle.scad>
-use <../../src/noise/nz_perlin2.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/ptf/ptf_circle.scad>
+use <@justinsdk/src/noise/nz_perlin2.scad>
 
 module noisy_circle_maze(r_cells, cell_width, wall_thickness, origin_offset, noisy_factor) {
     double_r_cells = r_cells * 2;

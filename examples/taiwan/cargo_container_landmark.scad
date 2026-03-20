@@ -1,5 +1,5 @@
-use <../../src/along_with.scad>
-use <../../src/box_extrude.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/box_extrude.scad>
 
 platform = "YES"; // [YES, NO]
 cube_only = "NO";   // [YES, NO]

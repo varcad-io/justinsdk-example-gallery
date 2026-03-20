@@ -1,6 +1,6 @@
-use <../../src/hollow_out.scad>
-use <../../src/voronoi/vrn2_from.scad>
-use <../../src/bend_extrude.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/voronoi/vrn2_from.scad>
+use <@justinsdk/src/bend_extrude.scad>
 
 r = 35;
 height = 35;

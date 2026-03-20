@@ -8,7 +8,7 @@
 *
 **/ 
 
-use <../../src/pp/_impl/_pp_poisson2.scad>
+use <_impl/_pp_poisson2.scad>
 
 function pp_poisson2(size, r, start = undef, k = 30, seed = undef, history = false) =
     let(

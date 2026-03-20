@@ -1,6 +1,6 @@
-use <../../src/experimental/tile_w2e.scad>
-use <../../src/select.scad>
-use <../../src/box_extrude.scad>
+use <@justinsdk/src/experimental/tile_w2e.scad>
+use <@justinsdk/src/select.scad>
+use <@justinsdk/src/box_extrude.scad>
 
 size = [15, 8];
 tile_width = 10;

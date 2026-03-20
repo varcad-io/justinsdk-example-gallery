@@ -1,5 +1,5 @@
-use <../../src/ellipse_extrude.scad>
-use <../../src/util/sum.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/util/sum.scad>
 
 beginning_radius = 15;
 fn = 5;

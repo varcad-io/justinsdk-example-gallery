@@ -8,7 +8,7 @@
 *
 **/
 
-use <../src/__comm__/__line_intersection.scad>
+use <__comm__/__line_intersection.scad>
 
 function lines_intersection(line1, line2, ext = false, epsilon = 0.0001) =
     len(line1[0]) == 2 ? __line_intersection2(line1, line2, ext, epsilon) : 

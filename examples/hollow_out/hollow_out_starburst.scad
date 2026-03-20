@@ -1,6 +1,6 @@
-use <../../src/shape_star.scad>
-use <../../src/polyline_join.scad>
-use <../../src/experimental/tri_bisectors.scad>
+use <@justinsdk/src/shape_star.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/experimental/tri_bisectors.scad>
 
 r1 = 30;
 r2 = 12;

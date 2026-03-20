@@ -1,5 +1,5 @@
-use <../src/surface/sf_solidify.scad>
-use <../src/util/sum.scad>
+use <@justinsdk/src/surface/sf_solidify.scad>
+use <@justinsdk/src/util/sum.scad>
 
 Z0 = [0, 0];
 NL = 50;

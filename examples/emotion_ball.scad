@@ -1,6 +1,6 @@
-use <../src/arc.scad>
-use <../src/pie.scad>
-use <../src/polyline2d.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/pie.scad>
+use <@justinsdk/src/polyline2d.scad>
 
 ball_radius = 15;
 thickness = 2.5;

@@ -1,5 +1,5 @@
-use <../../src/crystal_ball.scad>
-use <../../src/util/fibseq.scad>
+use <@justinsdk/src/crystal_ball.scad>
+use <@justinsdk/src/util/fibseq.scad>
 
 spirals = 10;
 petals_per_spiral = 4; 

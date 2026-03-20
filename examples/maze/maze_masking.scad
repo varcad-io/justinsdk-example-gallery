@@ -1,7 +1,7 @@
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/maze/mz_square_initialize.scad>
-use <../../src/voxel/vx_contour.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/maze/mz_square_initialize.scad>
+use <@justinsdk/src/voxel/vx_contour.scad>
 
 start = [1, 1];
 mask = [

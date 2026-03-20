@@ -1,4 +1,4 @@
-use <../../src/pie.scad>
+use <@justinsdk/src/pie.scad>
 
 radius = 15;
 height = 90;

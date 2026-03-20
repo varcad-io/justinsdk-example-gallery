@@ -1,6 +1,6 @@
-use <../../src/triangle/tri_subdivide.scad>
-use <../../src/triangle/tri_delaunay.scad>
-use <../../src/triangle/tri_incenter.scad>
+use <triangle/tri_subdivide.scad>
+use <triangle/tri_delaunay.scad>
+use <triangle/tri_incenter.scad>
 
 function circle_packing2(points, density = 1) =
     [

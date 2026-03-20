@@ -8,7 +8,7 @@
 *
 **/ 
 
-use <../../src/util/bsearch.scad>
+use <bsearch.scad>
 
 function has(lt, elem, sorted = false) = 
     echo("has is deprecated. use util/contains instead.")

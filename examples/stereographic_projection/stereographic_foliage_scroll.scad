@@ -1,6 +1,6 @@
-use <../../src/experimental/foliage_scroll.scad>
-use <../../src/polyline_join.scad>
-use <../../src/stereographic_extrude.scad>
+use <@justinsdk/src/experimental/foliage_scroll.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/stereographic_extrude.scad>
 
 $fn = 48;
 

@@ -1,7 +1,7 @@
-use <../../src/matrix/m_rotation.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_squarewalls.scad>
-use <../../src/ptf/ptf_sphere.scad>
+use <@justinsdk/src/matrix/m_rotation.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_squarewalls.scad>
+use <@justinsdk/src/ptf/ptf_sphere.scad>
 
 r = 10;
 rows = 24;

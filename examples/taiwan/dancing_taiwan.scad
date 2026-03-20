@@ -1,10 +1,10 @@
-use <../../src/trim_shape.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/shape_taiwan.scad>
-use <../../src/path_scaling_sections.scad>
-use <../../src/sweep.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/bijection_offset.scad>
+use <@justinsdk/src/trim_shape.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/shape_taiwan.scad>
+use <@justinsdk/src/path_scaling_sections.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/bijection_offset.scad>
 
 x1 = 4; // [-20:4]
 x2 = 3; // [-20:4]

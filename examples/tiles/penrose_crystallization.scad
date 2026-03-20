@@ -1,6 +1,6 @@
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/polyline_join.scad>
-use <../../src/experimental/tile_penrose3.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/experimental/tile_penrose3.scad>
 
 n = 9;
 spacing = 0.1;

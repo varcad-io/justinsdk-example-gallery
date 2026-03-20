@@ -1,4 +1,4 @@
-use <../../src/stereographic_extrude.scad>
+use <@justinsdk/src/stereographic_extrude.scad>
 use <../../examples/maze/square_maze.scad>
 
 maze_rows = 10;

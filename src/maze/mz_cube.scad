@@ -8,8 +8,8 @@
 *
 **/
 
-use <../../src/maze/_impl/_mz_cube_impl.scad>
-use <../../src/maze/mz_cube_initialize.scad>
+use <_impl/_mz_cube_impl.scad>
+use <mz_cube_initialize.scad>
 
 function mz_cube(layers, rows, columns, start = [0, 0, 0], init_cells, x_wrapping = false, y_wrapping = false, z_wrapping = false, seed) = 
     let(
@@ -32,7 +32,7 @@ function mz_cube(layers, rows, columns, start = [0, 0, 0], init_cells, x_wrappin
 /*
 use <experimental/mz_cube.scad>
 use <experimental/mz_cube_get.scad>
-use <../../src/util/has.scad>
+use <util/has.scad>
 
 layers = 3;
 rows = 4;

@@ -1,4 +1,4 @@
-use <../src/contours.scad>
+use <@justinsdk/src/contours.scad>
 
 level_step = 51;
 

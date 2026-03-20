@@ -1,5 +1,5 @@
-use <../../src/shape_ellipse.scad>
-use <../../src/shape_cyclicpolygon.scad>
+use <@justinsdk/src/shape_ellipse.scad>
+use <@justinsdk/src/shape_cyclicpolygon.scad>
 
 beginning_radius = 7.5;
 

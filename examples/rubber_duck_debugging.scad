@@ -1,6 +1,6 @@
-use <../src/polyhedra/geom_icosahedron.scad>
-use <../src/polyline_join.scad>
-use <../src/bend_extrude.scad>
+use <@justinsdk/src/polyhedra/geom_icosahedron.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bend_extrude.scad>
 
 detail = 1;
 object = "OpenSCAD";

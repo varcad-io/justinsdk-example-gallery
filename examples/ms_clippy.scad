@@ -1,9 +1,9 @@
-use <../src/curve.scad>;
-use <../src/shape_circle.scad>
-use <../src/path_extrude.scad>
-use <../src/bezier_curve.scad>
-use <../src/surface/sf_splines.scad>
-use <../src/surface/sf_thicken.scad>
+use <@justinsdk/src/curve.scad>;
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/surface/sf_splines.scad>
+use <@justinsdk/src/surface/sf_thicken.scad>
 
 $fn = 48;
 t_step = 0.05;

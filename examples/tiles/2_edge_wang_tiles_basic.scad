@@ -1,6 +1,6 @@
-use <../../src/experimental/tile_w2e.scad>
-use <../../src/select.scad>
-use <../../src/arc.scad>
+use <@justinsdk/src/experimental/tile_w2e.scad>
+use <@justinsdk/src/select.scad>
+use <@justinsdk/src/arc.scad>
 
 size = [15, 10];
 tile_width = 10;

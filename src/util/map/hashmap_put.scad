@@ -8,7 +8,7 @@
 *
 **/
 
-use <../../../src/util/map/_impl/_hashmap_put_impl.scad>
+use <_impl/_hashmap_put_impl.scad>
 
 include <../../__comm__/_str_hash.scad>
 

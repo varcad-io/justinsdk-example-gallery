@@ -8,8 +8,8 @@
 *
 **/
 
-use <../../../src/util/set/_impl/_hashset_impl.scad>
-use <../../../src/util/set/_impl/_hashset_add_impl.scad>
+use <_impl/_hashset_impl.scad>
+use <_impl/_hashset_add_impl.scad>
 
 include <../../__comm__/_str_hash.scad>
 	

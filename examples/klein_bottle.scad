@@ -1,9 +1,9 @@
-use <../src/arc_path.scad>
-use <../src/shape_circle.scad>
-use <../src/path_extrude.scad>
-use <../src/bezier_curve.scad>
-use <../src/polyline_join.scad>
-use <../src/bspline_curve.scad>
+use <@justinsdk/src/arc_path.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bspline_curve.scad>
 
 radius1 = 10;
 radius2 = 20;

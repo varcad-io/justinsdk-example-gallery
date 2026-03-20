@@ -1,4 +1,4 @@
-use <../src/shear.scad>
+use <@justinsdk/src/shear.scad>
 
 text = "順暢";
 font = "思源黑體 Heavy";

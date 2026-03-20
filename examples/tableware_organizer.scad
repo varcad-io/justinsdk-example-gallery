@@ -1,5 +1,5 @@
-use <../src/polyline2d.scad>
-use <../src/util/fibseq.scad>
+use <@justinsdk/src/polyline2d.scad>
+use <@justinsdk/src/util/fibseq.scad>
 
 smallest_length = 30;
 height1 = 60;

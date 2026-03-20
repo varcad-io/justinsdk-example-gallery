@@ -1,8 +1,8 @@
-use <../src/util/rand.scad>
-use <../src/noise/nz_perlin2s.scad>
-use <../src/surface/sf_solidify.scad>
-use <../src/ptf/ptf_bend.scad>
-use <../src/util/slice.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/noise/nz_perlin2s.scad>
+use <@justinsdk/src/surface/sf_solidify.scad>
+use <@justinsdk/src/ptf/ptf_bend.scad>
+use <@justinsdk/src/util/slice.scad>
 
 radius = 40;
 height = 100;

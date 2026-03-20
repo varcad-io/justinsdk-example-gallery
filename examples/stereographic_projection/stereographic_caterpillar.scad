@@ -1,5 +1,5 @@
-use <../../src/voxel/vx_gray.scad>
-use <../../src/stereographic_extrude.scad>
+use <@justinsdk/src/voxel/vx_gray.scad>
+use <@justinsdk/src/stereographic_extrude.scad>
 
 px_width = 0.8;
 

@@ -1,4 +1,4 @@
-use <../../../../src/util/set/_impl/_hashset_add_impl.scad>
+use <_hashset_add_impl.scad>
 
 include <../../_impl/_find_eq_search_some.scad>
 

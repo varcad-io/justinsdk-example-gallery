@@ -69,8 +69,8 @@ function reaction_diffusion(
 
 
 /*
-use <../../src/surface/sf_thicken.scad>
-use <../../src/experimental/reaction_diffusion.scad>
+use <surface/sf_thicken.scad>
+use <experimental/reaction_diffusion.scad>
 
 feed = 0.04; 
 kill = 0.06;

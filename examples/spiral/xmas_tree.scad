@@ -1,6 +1,6 @@
-use <../../src/line2d.scad>
-use <../../src/polyhedra/star.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/line2d.scad>
+use <@justinsdk/src/polyhedra/star.scad>
+use <@justinsdk/src/util/rand.scad>
 
 base = 100;
 segments = 150;

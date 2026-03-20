@@ -1,6 +1,6 @@
-use <../../src/shape_taiwan.scad>
-use <../../src/ellipse_extrude.scad>
-use <../../src/midpt_smooth.scad>
+use <@justinsdk/src/shape_taiwan.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/midpt_smooth.scad>
 
 smooth_times = 40;
 slices = 2;

@@ -8,7 +8,7 @@
 *
 **/
 
-use <../../src/maze/mz_square_get.scad>
+use <mz_square_get.scad>
 
 function mz_tiles(cells, left_border = true, bottom_border = true) =
     let(

@@ -1,6 +1,6 @@
-use <../../src/shape_circle.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/sweep.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/sweep.scad>
 
 r1 = 0.1;
 r2 = 50;

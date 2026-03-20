@@ -1,7 +1,7 @@
-use <../../src/polyline2d.scad>
-use <../../src/stereographic_extrude.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_hexwalls.scad>
+use <@justinsdk/src/polyline2d.scad>
+use <@justinsdk/src/stereographic_extrude.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_hexwalls.scad>
 
 columns = 10;
 cell_radius = 20;

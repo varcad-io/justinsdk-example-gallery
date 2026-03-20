@@ -1,10 +1,10 @@
-use <../../src/polyline_join.scad>
-use <../../src/turtle/t3d.scad>
-use <../../src/util/rand.scad>
-use <../../src/shape_circle.scad>
-use <../../src/pp/pp_disk.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/turtle/t3d.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/pp/pp_disk.scad>
 
-use <../../src/experimental/circle_packing.scad>
+use <@justinsdk/src/experimental/circle_packing.scad>
 
 trunk_leng = 1.5;
 branch_scale = 0.7;

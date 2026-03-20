@@ -1,4 +1,4 @@
-use <../../../src/maze/_impl/_mz_square_comm.scad>
+use <_mz_square_comm.scad>
 
 function _square_walls(cell, cell_width) = 
     let(loc = [cell.x, cell.y] * cell_width)

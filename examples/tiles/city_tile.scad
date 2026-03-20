@@ -1,9 +1,9 @@
-use <../../src/rounded_square.scad>
-use <../../src/select.scad>
-use <../../src/shear.scad>
-use <../../src/shape_trapezium.scad>
-use <../../src/arc.scad>
-use <../../src/util/rand.scad>
+use <@justinsdk/src/rounded_square.scad>
+use <@justinsdk/src/select.scad>
+use <@justinsdk/src/shear.scad>
+use <@justinsdk/src/shape_trapezium.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/util/rand.scad>
 
 module city_tile(i, tile_width) {
     select(i) {

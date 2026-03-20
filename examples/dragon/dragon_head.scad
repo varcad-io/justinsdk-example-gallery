@@ -1,13 +1,13 @@
-use <../../src/ellipse_extrude.scad>
-use <../../src/curve.scad>
-use <../../src/sweep.scad>
-use <../../src/matrix/m_transpose.scad>
-use <../../src/shape_trapezium.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/path_extrude.scad>
-use <../../src/shape_circle.scad>
-use <../../src/polyhedra/octahedron.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/curve.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/matrix/m_transpose.scad>
+use <@justinsdk/src/shape_trapezium.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/polyhedra/octahedron.scad>
 
 dragon_head();
 

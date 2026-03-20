@@ -1,4 +1,4 @@
-use <../../src/experimental/r_union2.scad>
+use <@justinsdk/src/experimental/r_union2.scad>
 
 beginning_radius = 7.5;
 

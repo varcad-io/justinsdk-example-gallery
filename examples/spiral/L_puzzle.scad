@@ -1,4 +1,4 @@
-use <../../src/util/fibseq.scad>
+use <@justinsdk/src/util/fibseq.scad>
 
 model = "ALL"; // [ALL, PIECE1, PIECE2]
 

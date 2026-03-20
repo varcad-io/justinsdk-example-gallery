@@ -1,6 +1,6 @@
-use <../../src/fibonacci_lattice.scad>
-use <../../src/polyline_join.scad>
-use <../../src/polyhedron_hull.scad>
+use <@justinsdk/src/fibonacci_lattice.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
 
 n = 150;
 radius = 12;

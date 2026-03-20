@@ -1,7 +1,7 @@
-use <../../src/maze/mz_theta.scad>
-use <../../src/util/find_index.scad>
-use <../../src/arc.scad>
-use <../../src/polyline2d.scad>
+use <@justinsdk/src/maze/mz_theta.scad>
+use <@justinsdk/src/util/find_index.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/polyline2d.scad>
 
 $fn = 48;
 

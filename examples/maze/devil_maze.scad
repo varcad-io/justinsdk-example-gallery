@@ -1,10 +1,10 @@
-use <../../src/maze/mz_theta_cells.scad>
-use <../../src/voxel/vx_line.scad>
-use <../../src/voxel/vx_circle.scad>
-use <../../src/util/dedup.scad>
-use <../../src/util/find_index.scad>
-use <../../src/noise/nz_perlin2.scad>
-use <../../src/voronoi/vrn2_cells_space.scad>
+use <@justinsdk/src/maze/mz_theta_cells.scad>
+use <@justinsdk/src/voxel/vx_line.scad>
+use <@justinsdk/src/voxel/vx_circle.scad>
+use <@justinsdk/src/util/dedup.scad>
+use <@justinsdk/src/util/find_index.scad>
+use <@justinsdk/src/noise/nz_perlin2.scad>
+use <@justinsdk/src/voronoi/vrn2_cells_space.scad>
 
 rows = 4;
 beginning_number = 8;

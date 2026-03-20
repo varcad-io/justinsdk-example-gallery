@@ -8,7 +8,7 @@
 *
 **/ 
 
-use <../../src/voxel/_impl/_vx_curve_impl.scad>
+use <_impl/_vx_curve_impl.scad>
 use <../util/dedup.scad>
 
 include <../__comm__/_pt2_hash.scad>

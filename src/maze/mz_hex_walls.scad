@@ -8,7 +8,7 @@
 *
 **/
 
-use <../../src/maze/_impl/_mz_hex_walls.scad>
+use <_impl/_mz_hex_walls.scad>
 
 function mz_hex_walls(cells, rows, columns, cell_radius, left_border = true, bottom_border = true) = 
     echo("mz_hex_walls is deprecated. use maze/mz_hexwalls instead.")

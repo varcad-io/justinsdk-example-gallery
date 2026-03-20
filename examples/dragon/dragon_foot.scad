@@ -1,4 +1,4 @@
-use <../../src/along_with.scad>
+use <@justinsdk/src/along_with.scad>
 use <../../examples/dragon/dragon_scales.scad>
 use <../../examples/dragon/dragon_claw.scad>
 

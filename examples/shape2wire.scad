@@ -1,6 +1,6 @@
-use <../src/ptf/ptf_rotate.scad>
-use <../src/polyline_join.scad>
-use <../src/shape_superformula.scad> 
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/shape_superformula.scad> 
 
 function shape2wire(shape, r) = 
 	let(

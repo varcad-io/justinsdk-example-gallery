@@ -1,7 +1,7 @@
-use <../../src/voronoi/vrn3_from.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/hollow_out.scad>
-use <../../src/sweep.scad>
+use <@justinsdk/src/voronoi/vrn3_from.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/sweep.scad>
 
 r = 13;
 h = 60;

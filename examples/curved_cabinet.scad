@@ -1,7 +1,7 @@
-use <../src/bezier_curve.scad>
-use <../src/sweep.scad>
-use <../src/matrix/m_transpose.scad>
-use <../src/util/sum.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/matrix/m_transpose.scad>
+use <@justinsdk/src/util/sum.scad>
 
 size = [100, 50, 120];
 shelf_thickness = 1.5;

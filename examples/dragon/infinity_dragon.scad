@@ -1,12 +1,12 @@
-use <../../src/along_with.scad>
-use <../../src/fibonacci_lattice.scad>
-use <../../src/polyhedron_hull.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/fibonacci_lattice.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
 use <../../examples/dragon/dragon_head.scad>
 use <../../examples/dragon/dragon_scales.scad>
 use <../../examples/dragon/dragon_foot.scad>
-use <../../src/experimental/lemniscate_2circles.scad>
-use <../../src/path_extrude.scad>
-use <../../src/bezier_curve.scad>
+use <@justinsdk/src/experimental/lemniscate_2circles.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
 
 rotate([0, 90, 180])
     infinity_dragon();

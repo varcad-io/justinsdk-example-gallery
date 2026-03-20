@@ -8,10 +8,10 @@
 *
 **/
 
-use <../src/__comm__/__frags.scad>
-use <../src/__comm__/__ra_to_xy.scad>
-use <../src/cross_sections.scad>
-use <../src/sweep.scad>
+use <__comm__/__frags.scad>
+use <__comm__/__ra_to_xy.scad>
+use <cross_sections.scad>
+use <sweep.scad>
 
 module ring_extrude(shape_pts, radius, angle = 360, twist = 0, scale = 1.0, triangles = "SOLID") {
     if(twist == 0 && scale == 1.0) {

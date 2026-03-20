@@ -1,9 +1,9 @@
-use <../src/polyhedron_hull.scad>
-use <../src/sweep.scad>
-use <../src/shape_trapezium.scad>
-use <../src/util/slice.scad>
-use <../src/util/sub_str.scad>
-use <../src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/shape_trapezium.scad>
+use <@justinsdk/src/util/slice.scad>
+use <@justinsdk/src/util/sub_str.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
 
 emoticon = "ToT";
 font = ["Arial Black", "Arial Black", "Arial Black"];

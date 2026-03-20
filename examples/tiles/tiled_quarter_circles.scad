@@ -1,5 +1,5 @@
-use <../../src/experimental/tile_truchet.scad>
-use <../../src/arc.scad>
+use <@justinsdk/src/experimental/tile_truchet.scad>
+use <@justinsdk/src/arc.scad>
 
 size = [50, 25];
 tile_width = 5;

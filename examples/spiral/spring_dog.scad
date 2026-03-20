@@ -1,11 +1,11 @@
-use <../../src/rounded_cylinder.scad>
-use <../../src/helix_extrude.scad>
-use <../../src/shape_circle.scad>
-use <../../src/arc.scad>
-use <../../src/ellipse_extrude.scad>
-use <../../src/shape_ellipse.scad>
-use <../../src/shape_liquid_splitting.scad>
-use <../../src/part/connector_peg.scad>
+use <@justinsdk/src/rounded_cylinder.scad>
+use <@justinsdk/src/helix_extrude.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/shape_ellipse.scad>
+use <@justinsdk/src/shape_liquid_splitting.scad>
+use <@justinsdk/src/part/connector_peg.scad>
 
 part = "PREVIEW"; // [FRONT, SPRING, BACK, PREVIEW]
 

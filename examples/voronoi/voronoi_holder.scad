@@ -1,6 +1,6 @@
-use <../../src/bend_extrude.scad>
-use <../../src/arc.scad>
-use <../../src/voronoi/vrn2_cells_space.scad>
+use <@justinsdk/src/bend_extrude.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/voronoi/vrn2_cells_space.scad>
 
 size = [200, 72];
 grid_w = 8;        // grid_w must divide size equally.

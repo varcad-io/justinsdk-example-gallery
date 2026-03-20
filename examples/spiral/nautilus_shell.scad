@@ -1,7 +1,7 @@
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/polyline_join.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/ellipse_extrude.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
 
 chambered_section_max_angle = 300;
 steps = 25;

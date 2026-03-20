@@ -1,5 +1,5 @@
-use <../../src/polyline_join.scad>
-use <../../src/turtle/t2d.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/turtle/t2d.scad>
 
 side_leng = 100;
 min_leng = 4;

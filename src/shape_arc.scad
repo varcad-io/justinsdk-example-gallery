@@ -8,9 +8,9 @@
 *
 **/ 
 
-use <../src/__comm__/__frags.scad>
-use <../src/__comm__/__ra_to_xy.scad>
-use <../src/__comm__/__edge_r.scad>
+use <__comm__/__frags.scad>
+use <__comm__/__ra_to_xy.scad>
+use <__comm__/__edge_r.scad>
 
 function shape_arc(radius, angle, width, width_mode = "LINE_CROSS") =
     let(

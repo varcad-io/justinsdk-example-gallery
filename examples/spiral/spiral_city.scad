@@ -1,7 +1,7 @@
-use <../../src/archimedean_spiral.scad>
-use <../../src/arc.scad>
-use <../../src/rounded_cube.scad>
-use <../../src/util/reverse.scad>
+use <@justinsdk/src/archimedean_spiral.scad>
+use <@justinsdk/src/arc.scad>
+use <@justinsdk/src/rounded_cube.scad>
+use <@justinsdk/src/util/reverse.scad>
 
 num_of_buildings = 10;
 seed_value = 15; 

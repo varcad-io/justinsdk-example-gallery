@@ -1,8 +1,8 @@
-use <../../src/bezier_curve.scad>
-use <../../src/ellipse_extrude.scad>
-use <../../src/path_extrude.scad>
-use <../../src/torus_knot.scad>
-use <../../src/util/reverse.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/torus_knot.scad>
+use <@justinsdk/src/util/reverse.scad>
 
 use <../../examples/dragon/dragon_head_low_poly.scad>
 

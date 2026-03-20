@@ -1,6 +1,6 @@
-use <../../src/shape_circle.scad>
-use <../../src/polyline_join.scad>
-use <../../src/util/sum.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/util/sum.scad>
 
 beginning_radius = 10;
 line_width = 2;

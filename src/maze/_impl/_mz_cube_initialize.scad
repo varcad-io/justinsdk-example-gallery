@@ -1,6 +1,6 @@
-use <../../../src/maze/_impl/_mz_cube_comm.scad>
+use <_mz_cube_comm.scad>
 
-include <../../../src/maze/_impl/_mz_cube_constants.scad>
+include <_mz_cube_constants.scad>
 
 // create a starting maze for being visited later.
 function _lrc_maze(layers, rows, columns) =  

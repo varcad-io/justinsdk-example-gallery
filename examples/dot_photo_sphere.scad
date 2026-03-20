@@ -1,5 +1,5 @@
-use <../src/voxel/vx_gray.scad>
-use <../src/ptf/ptf_sphere.scad>
+use <@justinsdk/src/voxel/vx_gray.scad>
+use <@justinsdk/src/ptf/ptf_sphere.scad>
 
 photo_size = [100, 100];
 radius = 50;

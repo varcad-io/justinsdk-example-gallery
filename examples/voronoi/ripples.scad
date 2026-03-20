@@ -1,6 +1,6 @@
-use <../../src/noise/nz_worley2.scad>
-use <../../src/noise/nz_perlin2.scad>
-use <../../src/surface/sf_thicken.scad>
+use <@justinsdk/src/noise/nz_worley2.scad>
+use <@justinsdk/src/noise/nz_perlin2.scad>
+use <@justinsdk/src/surface/sf_thicken.scad>
 
 size = [30, 30];
 grid_w = 15;

@@ -1,5 +1,5 @@
-use <../../src/line2d.scad>
-use <../../src/turtle/t2d.scad>
+use <@justinsdk/src/line2d.scad>
+use <@justinsdk/src/turtle/t2d.scad>
 
 style = "MIRROR"; // [TREES, INVERTED, MIRROR]
 trunk_angle = 86; // [1:90]

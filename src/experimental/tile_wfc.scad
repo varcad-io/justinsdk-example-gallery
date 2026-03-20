@@ -1,4 +1,4 @@
-use <../../src/experimental/_impl/_tiles_wfc_impl.scad>
+use <_impl/_tiles_wfc_impl.scad>
 use <../util/rand.scad>
 
 // An implementation of [Wave Function Collapse](https://github.com/mxgmn/WaveFunctionCollapse)

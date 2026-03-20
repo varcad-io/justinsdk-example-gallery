@@ -1,6 +1,6 @@
-use <../../src/arc.scad>
+use <@justinsdk/src/arc.scad>
 use <../../examples/maze/heart_maze.scad>
-use <../../src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_square.scad>
 
 names = ["Justin", "Monica"];
 font_name = "Arial Black";

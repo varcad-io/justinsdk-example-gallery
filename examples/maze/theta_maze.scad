@@ -1,6 +1,6 @@
-use <../../src/maze/mz_theta.scad>
-use <../../src/maze/mz_theta_get.scad>
-use <../../src/polyline_join.scad>
+use <@justinsdk/src/maze/mz_theta.scad>
+use <@justinsdk/src/maze/mz_theta_get.scad>
+use <@justinsdk/src/polyline_join.scad>
 
 rings = 5;
 beginning_number = 8;

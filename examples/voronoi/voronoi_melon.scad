@@ -1,7 +1,7 @@
-use <../../src/voronoi/vrn_sphere.scad>
-use <../../src/polyline_join.scad>
-use <../../src/pp/pp_sphere.scad>
-use <../../src/experimental/r_union3.scad>
+use <@justinsdk/src/voronoi/vrn_sphere.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/pp/pp_sphere.scad>
+use <@justinsdk/src/experimental/r_union3.scad>
 
 eyelets = 800;
 radius = 50;

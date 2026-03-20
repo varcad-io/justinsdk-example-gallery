@@ -1,5 +1,5 @@
-use <../src/shape_circle.scad>
-use <../src/ring_extrude.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/ring_extrude.scad>
 
 ball_radius = 10;
 mobius_radius = 30;

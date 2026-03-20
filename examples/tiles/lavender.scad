@@ -1,6 +1,6 @@
-use <../../src/pie.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/experimental/tile_penrose3.scad>
+use <@justinsdk/src/pie.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/experimental/tile_penrose3.scad>
 
 n = 5;
 radius = 30;

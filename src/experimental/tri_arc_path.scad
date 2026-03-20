@@ -1,9 +1,9 @@
-use <../../src/__comm__/__frags.scad>
-use <../../src/angle_between.scad>
-use <../../src/triangle/tri_circumcenter.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/util/reverse.scad>
-use <../../src/experimental/tri_is_ccw.scad>
+use <__comm__/__frags.scad>
+use <angle_between.scad>
+use <triangle/tri_circumcenter.scad>
+use <ptf/ptf_rotate.scad>
+use <util/reverse.scad>
+use <experimental/tri_is_ccw.scad>
 
 function _tri_arc_ct_clk(shape_pts) = 
     let(
@@ -23,10 +23,10 @@ function tri_arc_path(shape_pts) =
 		reverse(_tri_arc_ct_clk(reverse(shape_pts)));
 
 /*
-use <../../src/experimental/tri_arc_path.scad>
+use <experimental/tri_arc_path.scad>
 
-use <../../src/util/zip.scad>
-use <../../src/hull_polyline2d.scad>
+use <util/zip.scad>
+use <hull_polyline2d.scad>
 
 $fn = 24;
 pts = zip([rands(0, 20, 3), rands(0, 20, 3)]);

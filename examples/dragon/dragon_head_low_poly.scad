@@ -1,6 +1,6 @@
-use <../../src/bezier_curve.scad>
-use <../../src/path_extrude.scad>
-use <../../src/shape_circle.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/shape_circle.scad>
 
 module dragon_head_low_poly() {
     module palate() {

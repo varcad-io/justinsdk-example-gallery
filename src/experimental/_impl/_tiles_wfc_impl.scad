@@ -1,11 +1,11 @@
-use <../../../src/util/rand.scad>
-use <../../../src/util/some.scad>
-use <../../../src/util/sum.scad>
-use <../../../src/util/sorted.scad>
-use <../../../src/util/contains.scad>
-use <../../../src/util/set/hashset.scad>
-use <../../../src/util/set/hashset_elems.scad>
-use <../../../src/matrix/m_replace.scad>
+use <util/rand.scad>
+use <util/some.scad>
+use <util/sum.scad>
+use <util/sorted.scad>
+use <util/contains.scad>
+use <util/set/hashset.scad>
+use <util/set/hashset_elems.scad>
+use <matrix/m_replace.scad>
 
 function count_from(lt, from, leng_lt) = 
     len([

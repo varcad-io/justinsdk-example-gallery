@@ -8,7 +8,7 @@
 *
 **/
 
-use <../../src/util/_impl/_binary_search_impl.scad>
+use <_impl/_binary_search_impl.scad>
 
 function binary_search(sorted, target, lo = 0, hi = undef) = 
     _binary_search_impl(

@@ -1,6 +1,6 @@
-use <../src/shape_circle.scad>
-use <../src/experimental/differential_line_growth.scad>
-use <../src/midpt_smooth.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/experimental/differential_line_growth.scad>
+use <@justinsdk/src/midpt_smooth.scad>
 
 $fn = 24;
 r = 10;

@@ -1,15 +1,15 @@
-use <../src/polyhedra/polar_zonohedra.scad>
-use <../src/polyhedra/octahedron.scad>
-use <../src/polyhedra/icosahedron.scad>
-use <../src/shear.scad>
-use <../src/polyline_join.scad>
-use <../src/bezier_curve.scad>
-use <../src/matrix/m_transpose.scad>
-use <../src/sweep.scad>
-use <../src/experimental/worley_sphere.scad>
-use <../src/curve.scad>
-use <../src/ptf/ptf_rotate.scad>
-use <../src/util/dedup.scad>
+use <@justinsdk/src/polyhedra/polar_zonohedra.scad>
+use <@justinsdk/src/polyhedra/octahedron.scad>
+use <@justinsdk/src/polyhedra/icosahedron.scad>
+use <@justinsdk/src/shear.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/matrix/m_transpose.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/experimental/worley_sphere.scad>
+use <@justinsdk/src/curve.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/util/dedup.scad>
 
 detail = 1;
 head_angles = [5, 0, 20];

@@ -1,16 +1,16 @@
-use <../../src/helix.scad>
-use <../../src/along_with.scad>
-use <../../src/curve.scad>
-use <../../src/sweep.scad>
-use <../../src/shape_circle.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/path_scaling_sections.scad>
-use <../../src/experimental/worley_sphere.scad>
+use <@justinsdk/src/helix.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/curve.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/path_scaling_sections.scad>
+use <@justinsdk/src/experimental/worley_sphere.scad>
 use <../../examples/dragon/dragon_head.scad>
 use <../../examples/dragon/dragon_scales.scad>
 use <../../examples/dragon/dragon_foot.scad>
-use <../../src/path_extrude.scad>
-use <../../src/bezier_curve.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
 
 r1 = 25;
 r2 = 15;

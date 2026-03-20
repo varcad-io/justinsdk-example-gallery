@@ -1,5 +1,5 @@
-use <../../src/maze/mz_cube.scad>
-use <../../src/maze/mz_cube_initialize.scad>
+use <@justinsdk/src/maze/mz_cube.scad>
+use <@justinsdk/src/maze/mz_cube_initialize.scad>
 use <../../examples/maze/maze3d.scad>
 
 face_radius = 9;  

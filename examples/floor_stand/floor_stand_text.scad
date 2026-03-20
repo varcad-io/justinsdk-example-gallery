@@ -1,6 +1,6 @@
-use <../../src/util/split_str.scad>
+use <@justinsdk/src/util/split_str.scad>
 use <../../examples/floor_stand/floor_stand.scad>
-use <../../src/multi_line_text.scad>
+use <@justinsdk/src/multi_line_text.scad>
 
 text = "Coder at Work";
 font = "Arial Black";

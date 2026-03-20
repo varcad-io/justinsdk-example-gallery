@@ -1,8 +1,8 @@
-use <../../../src/maze/_impl/_mz_cube_comm.scad>
+use <_mz_cube_comm.scad>
 use <../../util/shuffle.scad>
 use <../../matrix/m_replace.scad>
 
-include <../../../src/maze/_impl/_mz_cube_constants.scad>
+include <_mz_cube_constants.scad>
 
 function update(cells, cell) = 
     let(

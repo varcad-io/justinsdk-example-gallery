@@ -1,7 +1,7 @@
-use <../../src/polyline_join.scad>
-use <../../src/triangle/tri_delaunay.scad>
-use <../../src/experimental/tri_bisectors.scad>
-use <../../src/ptf/ptf_bend.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/triangle/tri_delaunay.scad>
+use <@justinsdk/src/experimental/tri_bisectors.scad>
+use <@justinsdk/src/ptf/ptf_bend.scad>
 
 size = [100, 40];
 pt_nums = 20;

@@ -1,7 +1,7 @@
-use <../src/rounded_cylinder.scad>
-use <../src/polyhedra/geom_tetrahedron.scad>
-use <../src/util/rand.scad>
-use <../src/pp/pp_poisson2.scad>
+use <@justinsdk/src/rounded_cylinder.scad>
+use <@justinsdk/src/polyhedra/geom_tetrahedron.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/pp/pp_poisson2.scad>
 
 radius = 20;
 $fn = 6; // multiples of 6

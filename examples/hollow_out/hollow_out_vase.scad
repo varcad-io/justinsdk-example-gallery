@@ -1,9 +1,9 @@
-use <../../src/polyline_join.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/ptf/ptf_rotate.scad>
-use <../../src/matrix/m_transpose.scad>
-use <../../src/experimental/hollow_out_sweep.scad>
-use <../../src/experimental/tri_bisectors.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/ptf/ptf_rotate.scad>
+use <@justinsdk/src/matrix/m_transpose.scad>
+use <@justinsdk/src/experimental/hollow_out_sweep.scad>
+use <@justinsdk/src/experimental/tri_bisectors.scad>
 
 t_step = 0.1;
 line_diameter = 3;

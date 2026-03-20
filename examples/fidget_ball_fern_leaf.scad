@@ -1,8 +1,8 @@
-use <../src/polyline_join.scad>
-use <../src/hollow_out.scad>
-use <../src/util/dedup.scad>
-use <../src/turtle/lsystem2.scad>
-use <../src/experimental/ptf_c2sphere.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/util/dedup.scad>
+use <@justinsdk/src/turtle/lsystem2.scad>
+use <@justinsdk/src/experimental/ptf_c2sphere.scad>
 
 $fn = 48;
 

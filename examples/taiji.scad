@@ -1,4 +1,4 @@
-use <../src/arc.scad>
+use <@justinsdk/src/arc.scad>
 
 radius = 30;
 thickness = 2.5;

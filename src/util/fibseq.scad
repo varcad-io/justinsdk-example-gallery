@@ -8,6 +8,6 @@
 *
 **/ 
 
-use <../../src/util/_impl/_fibseq_impl.scad> 
+use <_impl/_fibseq_impl.scad> 
 
 function fibseq(from, to) = _fibseq_impl(from, to);

@@ -1,13 +1,13 @@
-use <../../src/bezier_curve.scad>
-use <../../src/along_with.scad>
-use <../../src/bezier_smooth.scad>
-use <../../src/fibonacci_lattice.scad>
-use <../../src/polyhedron_hull.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/along_with.scad>
+use <@justinsdk/src/bezier_smooth.scad>
+use <@justinsdk/src/fibonacci_lattice.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
 use <../../examples/dragon/dragon_head.scad>
 use <../../examples/dragon/dragon_scales.scad>
 use <../../examples/dragon/dragon_foot.scad>
-use <../../src/path_extrude.scad>
-use <../../src/bezier_curve.scad>
+use <@justinsdk/src/path_extrude.scad>
+use <@justinsdk/src/bezier_curve.scad>
 
 dragon_and_perl();
 

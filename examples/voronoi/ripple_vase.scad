@@ -1,11 +1,11 @@
-use <../../src/shape_circle.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/sweep.scad>
-use <../../src/path_scaling_sections.scad>
-use <../../src/bijection_offset.scad>
-use <../../src/util/rand.scad>
-use <../../src/noise/nz_worley3s.scad>
-use <../../src/noise/nz_perlin3.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/sweep.scad>
+use <@justinsdk/src/path_scaling_sections.scad>
+use <@justinsdk/src/bijection_offset.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/noise/nz_worley3s.scad>
+use <@justinsdk/src/noise/nz_perlin3.scad>
 
 beginning_radius = 30;
 height = 180;

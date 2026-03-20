@@ -1,8 +1,8 @@
-use <../../src/noise/nz_cell.scad>
-use <../../src/golden_spiral.scad>
-use <../../src/noise/nz_perlin2.scad>
-use <../../src/surface/sf_thicken.scad>
-use <../../src/util/radians.scad>
+use <@justinsdk/src/noise/nz_cell.scad>
+use <@justinsdk/src/golden_spiral.scad>
+use <@justinsdk/src/noise/nz_perlin2.scad>
+use <@justinsdk/src/surface/sf_thicken.scad>
+use <@justinsdk/src/util/radians.scad>
 
 amplitude = 2;
 angle_step = 30;

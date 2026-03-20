@@ -1,4 +1,4 @@
-use <../../src/rounded_square.scad>
+use <@justinsdk/src/rounded_square.scad>
 
 beginning_radius = 5;
 fn = 6;

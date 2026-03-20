@@ -1,12 +1,12 @@
-use <../../src/pie.scad>
-use <../../src/util/parse_number.scad>
-use <../../src/util/contains.scad>
-use <../../src/util/rand.scad>
-use <../../src/util/choose.scad>
-use <../../src/experimental/tile_wfc.scad>
-use <../../src/rounded_square.scad>
-use <../../src/box_extrude.scad>
-use <../../src/polyhedron_hull.scad>
+use <@justinsdk/src/pie.scad>
+use <@justinsdk/src/util/parse_number.scad>
+use <@justinsdk/src/util/contains.scad>
+use <@justinsdk/src/util/rand.scad>
+use <@justinsdk/src/util/choose.scad>
+use <@justinsdk/src/experimental/tile_wfc.scad>
+use <@justinsdk/src/rounded_square.scad>
+use <@justinsdk/src/box_extrude.scad>
+use <@justinsdk/src/polyhedron_hull.scad>
 
 size = [5, 5];
 tileW = 10;

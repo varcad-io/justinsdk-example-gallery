@@ -1,4 +1,4 @@
-use <../../src/hollow_out.scad>
+use <@justinsdk/src/hollow_out.scad>
 
 model = "ALL"; // [JOIN, RING, ALL]
 radius = 131.3 / 2;

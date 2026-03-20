@@ -8,9 +8,9 @@
 *
 **/ 
 
-use <../../src/surface/_impl/_sf_square_surfaces.scad>
+use <_impl/_sf_square_surfaces.scad>
 use <../util/unit_vector.scad>
-use <../../src/surface/sf_solidify.scad>
+use <sf_solidify.scad>
 
 module sf_curve(levels, curve_path, thickness, depth, invert = false, convexity = 1) {
     rows = len(levels);

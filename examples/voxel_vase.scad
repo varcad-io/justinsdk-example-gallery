@@ -1,6 +1,6 @@
-use <../src/bezier_curve.scad>
-use <../src/voxel/vx_polyline.scad>
-use <../src/voxel/vx_cylinder.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/voxel/vx_polyline.scad>
+use <@justinsdk/src/voxel/vx_cylinder.scad>
 
 x1 = 5;
 x2 = 20;

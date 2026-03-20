@@ -1,4 +1,4 @@
-use <../../src/voronoi/vrn2_cells_space.scad>
+use <@justinsdk/src/voronoi/vrn2_cells_space.scad>
 
 grid_w = 5;
 spacing = 0.2;

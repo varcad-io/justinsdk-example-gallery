@@ -9,7 +9,7 @@
 **/
 
 use <../util/rand.scad>
-use <../../src/noise/_impl/_pnoise1_impl.scad>
+use <_impl/_pnoise1_impl.scad>
 
 function nz_perlin1s(xs, seed) = 
     let(sd = is_undef(seed) ? rand() * 1000: seed)

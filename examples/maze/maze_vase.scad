@@ -1,10 +1,10 @@
-use <../../src/polyline_join.scad>
-use <../../src/bezier_curve.scad>
-use <../../src/maze/mz_square.scad>
-use <../../src/maze/mz_square_get.scad>
-use <../../src/shape_circle.scad>
-use <../../src/angle_between.scad>
-use <../../src/polyhedra/octahedron.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/maze/mz_square.scad>
+use <@justinsdk/src/maze/mz_square_get.scad>
+use <@justinsdk/src/shape_circle.scad>
+use <@justinsdk/src/angle_between.scad>
+use <@justinsdk/src/polyhedra/octahedron.scad>
 
 $fn = 36;
 t_step = 0.04;

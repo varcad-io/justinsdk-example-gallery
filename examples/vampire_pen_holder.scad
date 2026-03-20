@@ -1,11 +1,11 @@
-use <../src/bezier_curve.scad>
-use <../src/hollow_out.scad>
-use <../src/rounded_extrude.scad>
-use <../src/bend_extrude.scad>
-use <../src/ellipse_extrude.scad>
-use <../src/shape_ellipse.scad>
-use <../src/surface/sf_splines.scad>
-use <../src/surface/sf_thicken.scad>
+use <@justinsdk/src/bezier_curve.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/rounded_extrude.scad>
+use <@justinsdk/src/bend_extrude.scad>
+use <@justinsdk/src/ellipse_extrude.scad>
+use <@justinsdk/src/shape_ellipse.scad>
+use <@justinsdk/src/surface/sf_splines.scad>
+use <@justinsdk/src/surface/sf_thicken.scad>
 
 holder_height = 80;
 holder_round_r = 5;

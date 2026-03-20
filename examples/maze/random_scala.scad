@@ -1,4 +1,4 @@
-use <../../src/maze/mz_hamiltonian.scad>
+use <@justinsdk/src/maze/mz_hamiltonian.scad>
 
 module random_scala(rows, columns, start, width, height) {
     line = mz_hamiltonian(rows, columns, start);

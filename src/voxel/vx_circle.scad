@@ -8,7 +8,7 @@
 *
 **/ 
 
-use <../../src/voxel/_impl/_vx_circle_impl.scad>
+use <_impl/_vx_circle_impl.scad>
 use <../util/set/hashset.scad>
 use <../util/set/hashset_elems.scad>
 

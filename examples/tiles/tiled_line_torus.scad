@@ -1,6 +1,6 @@
-use <../../src/experimental/tile_truchet.scad>
-use <../../src/polyline_join.scad>
-use <../../src/ptf/ptf_torus.scad>
+use <@justinsdk/src/experimental/tile_truchet.scad>
+use <@justinsdk/src/polyline_join.scad>
+use <@justinsdk/src/ptf/ptf_torus.scad>
 
 size = [20, 50];
 line_diameter = 1;

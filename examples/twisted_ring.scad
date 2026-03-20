@@ -1,6 +1,6 @@
-use <../src/ring_extrude.scad>
-use <../src/arc_path.scad>
-use <../src/shape_liquid_splitting.scad>
+use <@justinsdk/src/ring_extrude.scad>
+use <@justinsdk/src/arc_path.scad>
+use <@justinsdk/src/shape_liquid_splitting.scad>
 
 $fn = 96;
 

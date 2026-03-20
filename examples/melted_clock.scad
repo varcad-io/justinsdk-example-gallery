@@ -1,6 +1,6 @@
-use <../src/line2d.scad>
-use <../src/hollow_out.scad>
-use <../src/bend_extrude.scad>
+use <@justinsdk/src/line2d.scad>
+use <@justinsdk/src/hollow_out.scad>
+use <@justinsdk/src/bend_extrude.scad>
 
 minute = 18; 
 hour = 9;    
