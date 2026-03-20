@@ -8,7 +8,7 @@ Repository-specific adjustments include:
 - generating a top-level `index.js` selector entry that chooses which example to render
 - exposing the example selector through `widgets.json`
 - lazy-loading only the selected example at runtime from `index.js`, instead of importing every example eagerly on first render
-- keeping upstream example imports pointed at the repository-local `src/` tree so the gallery runs without an external JustinSDK library link
+- rewriting upstream dotSCAD imports to `@justinsdk/...` so they resolve through the linked JustinSDK library at runtime
 - keeping cross-example imports inside `examples/` local to the repository
 
 The intent of these changes is packaging and runtime adaptation, not relicensing of the upstream dotSCAD code.

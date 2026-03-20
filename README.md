@@ -12,9 +12,9 @@ Notes:
 
 - The selector options are generated from the example file paths.
 - The selector entry lazy-loads only the chosen example at runtime so the whole repo does not need to parse every example on first render.
-- The upstream example imports stay local to the repository’s bundled `src/` tree so the gallery can replay the examples without an external library dependency.
+- The upstream example imports resolve through the linked `justinsdk` library at runtime using `@justinsdk/...` paths.
 - The original examples remain available under `examples/` for direct browsing.
-- Cross-example references inside `examples/` remain local, and dotSCAD library imports resolve through the repository’s bundled `src/` tree.
+- Cross-example references inside `examples/` remain local.
 
 License and attribution:
 

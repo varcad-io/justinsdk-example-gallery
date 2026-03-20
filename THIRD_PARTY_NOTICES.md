@@ -10,9 +10,8 @@ This repository redistributes upstream example material from the dotSCAD project
 Redistributed upstream content in this repository includes:
 
 - `examples/`
-- `src/`
 
-The JustinSDK library source itself is expected to be provided through the linked `justinsdk` library at runtime rather than being vendored into this repository.
+The JustinSDK library source is expected to be provided through the linked `justinsdk` library at runtime rather than being vendored into this repository.
 
 Local repository-specific files and glue code include:
 
