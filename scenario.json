@@ -1,0 +1,12 @@
+{
+  "title": "JustinSDK Example Gallery",
+  "entryPath": "/index.js",
+  "linkedLibraries": [],
+  "features": [
+    "jscad",
+    "scad-imports",
+    "widgets",
+    "gallery",
+    "justinsdk-examples"
+  ]
+}
