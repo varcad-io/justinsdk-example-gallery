@@ -11,7 +11,7 @@ const EXAMPLE_PATHS = Object.freeze({
   "examples/bearing_captured_in_mobius_cut": "/examples/bearing_captured_in_mobius_cut.scad",
   "examples/bunny_frame": "/examples/bunny_frame.scad",
   "examples/cat_corner_protector": "/examples/cat_corner_protector.scad",
-  "examples/caterpillar": "/examples/caterpillar.scad",
+  "examples/caterpillar": "/examples/caterpillar.js",
   "examples/chrome_dino": "/examples/chrome_dino.scad",
   "examples/circle_packing/forest": "/examples/circle_packing/forest.scad",
   "examples/circle_packing/packing_circles": "/examples/circle_packing/packing_circles.scad",
@@ -453,7 +453,9 @@ export async function main({ variables = {} } = {}) {
   const selectedExample = String(variables.example || DEFAULT_EXAMPLE);
   const modulePath = EXAMPLE_PATHS[selectedExample] || EXAMPLE_PATHS[DEFAULT_EXAMPLE];
   const selectedModule = await cadRuntime.importModule(modulePath, { fromPath: "/index.js" });
-  const exampleGeometry = selectedModule?.default ?? selectedModule;
+  const exampleGeometry = typeof selectedModule?.main === "function"
+    ? await selectedModule.main({ variables })
+    : (selectedModule?.default ?? selectedModule);
   const globallyAdjusted = applyGlobalPresentation(exampleGeometry, variables);
   return applyExampleSpecificPresentation(selectedExample, globallyAdjusted, variables);
 }

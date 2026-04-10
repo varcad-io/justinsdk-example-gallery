@@ -90,6 +90,30 @@
     }
   },
   {
+    "name": "caterpillar_base_arm_angle_deg",
+    "type": "Slider",
+    "description": "Rotate the main caterpillar base arm forward or backward",
+    "range": "90,180",
+    "defaultValue": "135",
+    "visibleWhen": {
+      "field": "example",
+      "operator": "equals",
+      "value": "examples/caterpillar"
+    }
+  },
+  {
+    "name": "caterpillar_middle_arm_angle_deg",
+    "type": "Slider",
+    "description": "Change the bend angle for the middle caterpillar arm segment",
+    "range": "30,130",
+    "defaultValue": "80",
+    "visibleWhen": {
+      "field": "example",
+      "operator": "equals",
+      "value": "examples/caterpillar"
+    }
+  },
+  {
     "type": "Section",
     "name": "maze_controls",
     "label": "Maze Controls",

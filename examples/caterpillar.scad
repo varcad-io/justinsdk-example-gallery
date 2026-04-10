@@ -94,14 +94,14 @@ module body(radius) {
 	}
 }
 
-module arm(radius) {
+module arm(radius, middle_arm_angle = 80) {
     translate([0, 0, -radius]) {
 		translate([0, 0, radius / 2]) 
 		linear_extrude(radius) {
 			translate([0, -radius * 0.75, 0]) 
 			    square([radius * 9, radius * 1.5]);
 
-			rotate(80) 
+			rotate(middle_arm_angle) 
 			translate([0, -radius * 0.5, 0]) 
 			    square([radius * 9, radius]);
 		}
@@ -156,7 +156,7 @@ module glove(radius) {
 	}
 }
 
-module big_caterpillar(radius) {
+module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
 	translate([0, -radius * 4, 0]) 
 	rotate([90, 0, 0]) 
 	    track(radius);
@@ -170,8 +170,8 @@ module big_caterpillar(radius) {
 	
 	color("yellow") 
 	translate([radius * 6, -radius * 4.5, radius * 9.5]) 
-	rotate([90, 135, 0]) 
-	    arm(radius);
+	rotate([90, base_arm_angle, 0]) 
+	    arm(radius, middle_arm_angle);
 	
 	translate([radius * 10.75, -radius * 4.5, radius / 2.325]) 
 	rotate([0, 70, 180]) 
@@ -213,8 +213,8 @@ module small_caterpillar(radius) {
 	}
 }
 
-module caterpillars(radius) {
-	big_caterpillar(radius);
+module caterpillars(radius, base_arm_angle = 135, middle_arm_angle = 80) {
+	big_caterpillar(radius, base_arm_angle, middle_arm_angle);
 	
 	translate([radius * 3.5, -radius * 4.5, radius * 9.75]) 
 	rotate([0, -15, 0]) 
