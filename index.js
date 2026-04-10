@@ -1,8 +1,11 @@
 // Generated from lib/justinsdk/examples
 // @ts-nocheck
 import cadRuntime from "@varcad/cad-runtime";
+import * as modeling from "@jscad/modeling";
 
-const DEFAULT_EXAMPLE = "examples/bearing_captured_in_mobius_cut";
+const DEFAULT_EXAMPLE = "examples/caterpillar";
+const { rotateX, rotateY, rotateZ, scale, translate } = modeling.transforms;
+const { colorize } = modeling.colors;
 
 const EXAMPLE_PATHS = Object.freeze({
   "examples/bearing_captured_in_mobius_cut": "/examples/bearing_captured_in_mobius_cut.scad",
@@ -227,9 +230,230 @@ export const EXAMPLE_OPTIONS = Object.freeze(
   })),
 );
 
+const FAMILY_PREFIXES = Object.freeze({
+  dragon: "examples/dragon/",
+  maze: "examples/maze/",
+  spiral: "examples/spiral/",
+  spiralPolygons: "examples/spiral_polygons/",
+  organicCirclePacking: "examples/circle_packing/",
+  organicTurtle: "examples/turtle/",
+  organicVoronoi: "examples/voronoi/",
+});
+
+const CATERPILLAR_EXAMPLES = Object.freeze([
+  "examples/caterpillar",
+  "examples/stereographic_projection/stereographic_caterpillar",
+]);
+
+const toFiniteNumber = (value, fallback = 0) => {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : fallback;
+};
+
+const toPositiveInteger = (value, fallback = 1, { min = 1, max = 8 } = {}) => {
+  const parsed = Math.round(toFiniteNumber(value, fallback));
+  return Math.max(min, Math.min(max, parsed));
+};
+
+const degreesToRadians = (value) => (toFiniteNumber(value, 0) * Math.PI) / 180;
+const normalizeVector3 = (value, fallback = [0, 0, 0]) => {
+  const source = Array.isArray(value)
+    ? value
+    : typeof value === "string"
+      ? value.split(",")
+      : value == null
+        ? []
+        : [value];
+  const numbers = source
+    .slice(0, 3)
+    .map((entry, index) => toFiniteNumber(entry, fallback[index] ?? 0));
+  while (numbers.length < 3) {
+    numbers.push(fallback[numbers.length] ?? 0);
+  }
+  return numbers;
+};
+const hexToColorArray = (value, fallback = "#67b3ff") => {
+  const normalized = String(value || fallback).trim().toLowerCase();
+  const hex = /^#[0-9a-f]{6}$/.test(normalized)
+    ? normalized.slice(1)
+    : /^#[0-9a-f]{3}$/.test(normalized)
+      ? `${normalized[1]}${normalized[1]}${normalized[2]}${normalized[2]}${normalized[3]}${normalized[3]}`
+      : String(fallback || "#67b3ff").replace("#", "");
+  const numeric = Number.parseInt(hex, 16);
+  return [
+    ((numeric >> 16) & 255) / 255,
+    ((numeric >> 8) & 255) / 255,
+    (numeric & 255) / 255,
+    1,
+  ];
+};
+
+const asGeometryList = (value) =>
+  (Array.isArray(value) ? value.flat(Infinity) : [value]).filter(Boolean);
+
+const fromGeometryList = (value) => {
+  const geometries = asGeometryList(value);
+  if (geometries.length === 0) {
+    return null;
+  }
+  return geometries.length === 1 ? geometries[0] : geometries;
+};
+
+const mapGeometryList = (value, mapper) =>
+  fromGeometryList(asGeometryList(value).map((geometry) => mapper(geometry)).filter(Boolean));
+
+const translateGeometry = (value, offset = [0, 0, 0]) =>
+  mapGeometryList(value, (geometry) => translate(offset, geometry));
+
+const rotateGeometryX = (value, degrees = 0) => {
+  const radians = degreesToRadians(degrees);
+  return radians ? mapGeometryList(value, (geometry) => rotateX(radians, geometry)) : value;
+};
+
+const rotateGeometryZ = (value, degrees = 0) => {
+  const radians = degreesToRadians(degrees);
+  return radians ? mapGeometryList(value, (geometry) => rotateZ(radians, geometry)) : value;
+};
+
+const rotateGeometryY = (value, degrees = 0) => {
+  const radians = degreesToRadians(degrees);
+  return radians && typeof rotateY === "function"
+    ? mapGeometryList(value, (geometry) => rotateY(radians, geometry))
+    : value;
+};
+
+const scaleGeometryUniform = (value, factor = 1) => {
+  const parsed = toFiniteNumber(factor, 1);
+  return parsed === 1 ? value : mapGeometryList(value, (geometry) => scale([parsed, parsed, parsed], geometry));
+};
+
+const mirrorGeometryOnX = (value) =>
+  mapGeometryList(value, (geometry) => scale([-1, 1, 1], geometry));
+
+const tintGeometry = (value, hexColor = "#67b3ff") =>
+  typeof colorize === "function"
+    ? mapGeometryList(value, (geometry) => colorize(hexToColorArray(hexColor), geometry))
+    : value;
+
+const duplicateAlongX = (value, count = 1, spacing = 90) => {
+  const geometryList = asGeometryList(value);
+  if (geometryList.length === 0) {
+    return null;
+  }
+  const duplicateCount = toPositiveInteger(count, 1, { min: 1, max: 6 });
+  if (duplicateCount <= 1) {
+    return fromGeometryList(geometryList);
+  }
+  const offsetStart = ((duplicateCount - 1) * spacing) / 2;
+  const duplicates = [];
+  for (let index = 0; index < duplicateCount; index += 1) {
+    const offset = index * spacing - offsetStart;
+    for (const geometry of geometryList) {
+      duplicates.push(translate([offset, 0, 0], geometry));
+    }
+  }
+  return fromGeometryList(duplicates);
+};
+
+const orbitCopies = (value, count = 1, radius = 120) => {
+  const geometryList = asGeometryList(value);
+  if (geometryList.length === 0) {
+    return null;
+  }
+  const duplicateCount = toPositiveInteger(count, 1, { min: 1, max: 8 });
+  if (duplicateCount <= 1) {
+    return fromGeometryList(geometryList);
+  }
+  const nextRadius = toFiniteNumber(radius, 120);
+  const duplicates = [];
+  for (let index = 0; index < duplicateCount; index += 1) {
+    const angle = (Math.PI * 2 * index) / duplicateCount;
+    const x = Math.cos(angle) * nextRadius;
+    const y = Math.sin(angle) * nextRadius;
+    for (const geometry of geometryList) {
+      duplicates.push(translate([x, y, 0], rotateZ(angle, geometry)));
+    }
+  }
+  return fromGeometryList(duplicates);
+};
+
+const applyGlobalPresentation = (value, variables = {}) => {
+  let next = value;
+  next = scaleGeometryUniform(next, variables.display_scale ?? 1);
+  next = translateGeometry(next, normalizeVector3(variables.offset_xyz, [0, 0, 0]));
+  const [rotateXDeg, rotateYDeg, rotateZDeg] = normalizeVector3(variables.rotate_xyz, [0, 0, 0]);
+  next = rotateGeometryX(next, rotateXDeg);
+  next = rotateGeometryY(next, rotateYDeg);
+  next = rotateGeometryZ(next, rotateZDeg);
+  next = rotateGeometryZ(next, variables.yaw_deg ?? 0);
+  next = tintGeometry(next, variables.accent_color ?? "#67b3ff");
+  return next;
+};
+
+const isOrganicExample = (selectedExample) =>
+  selectedExample.startsWith(FAMILY_PREFIXES.organicCirclePacking)
+  || selectedExample.startsWith(FAMILY_PREFIXES.organicTurtle)
+  || selectedExample.startsWith(FAMILY_PREFIXES.organicVoronoi);
+
+const applyExampleSpecificPresentation = (selectedExample, value, variables = {}) => {
+  let next = value;
+
+  if (CATERPILLAR_EXAMPLES.includes(selectedExample)) {
+    next = duplicateAlongX(
+      next,
+      variables.caterpillar_companions ?? 1,
+      toFiniteNumber(variables.caterpillar_spacing, 120),
+    );
+  }
+
+  if (selectedExample.startsWith(FAMILY_PREFIXES.maze)) {
+    next = translateGeometry(next, [0, 0, toFiniteNumber(variables.maze_lift_z, 0)]);
+    next = rotateGeometryZ(next, variables.maze_spin_deg ?? 0);
+    if (variables.maze_ring_layout) {
+      next = orbitCopies(
+        next,
+        variables.maze_ring_count ?? 3,
+        toFiniteNumber(variables.maze_ring_radius, 130),
+      );
+    }
+  }
+
+  if (selectedExample.startsWith(FAMILY_PREFIXES.dragon)) {
+    next = rotateGeometryX(next, variables.dragon_pitch_deg ?? 0);
+    if (variables.dragon_mirror) {
+      next = mirrorGeometryOnX(next);
+    }
+  }
+
+  if (
+    selectedExample.startsWith(FAMILY_PREFIXES.spiral)
+    || selectedExample.startsWith(FAMILY_PREFIXES.spiralPolygons)
+  ) {
+    next = orbitCopies(
+      next,
+      variables.spiral_copies ?? 1,
+      toFiniteNumber(variables.spiral_orbit_radius, 140),
+    );
+  }
+
+  if (isOrganicExample(selectedExample)) {
+    if (variables.organic_radial_layout) {
+      next = orbitCopies(
+        next,
+        variables.organic_copies ?? 1,
+        toFiniteNumber(variables.organic_orbit_radius, 95),
+      );
+    }
+  }
+
+  return next;
+};
+
 export async function main({ variables = {} } = {}) {
   const selectedExample = String(variables.example || DEFAULT_EXAMPLE);
   const modulePath = EXAMPLE_PATHS[selectedExample] || EXAMPLE_PATHS[DEFAULT_EXAMPLE];
   const selectedModule = await cadRuntime.importModule(modulePath, { fromPath: "/index.js" });
-  return selectedModule?.default ?? selectedModule;
+  const exampleGeometry = selectedModule?.default ?? selectedModule;
+  const globallyAdjusted = applyGlobalPresentation(exampleGeometry, variables);
+  return applyExampleSpecificPresentation(selectedExample, globallyAdjusted, variables);
 }
