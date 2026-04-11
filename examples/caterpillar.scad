@@ -94,25 +94,48 @@ module body(radius) {
 	}
 }
 
-module arm(radius, middle_arm_angle = 80) {
-    translate([0, 0, -radius]) {
-		translate([0, 0, radius / 2]) 
-		linear_extrude(radius) {
-			translate([0, -radius * 0.75, 0]) 
-			    square([radius * 9, radius * 1.5]);
-
-			rotate(middle_arm_angle) 
-			translate([0, -radius * 0.5, 0]) 
-			    square([radius * 9, radius]);
+module arm_segment(radius, length, segment_radius, joint_radius) {
+	translate([0, 0, -radius * 0.6]) 
+	linear_extrude(radius * 1.2)
+		hull() {
+			circle(segment_radius);
+			translate([length, 0, 0]) 
+				circle(segment_radius);
 		}
 
-		translate([0, 0, radius * 0.25]) 
+	translate([0, 0, -radius * 0.75]) 
+	linear_extrude(radius * 1.5) 
+		circle(joint_radius);
+}
+
+module arm(radius, middle_arm_angle = 80) {
+	upper_arm_length = radius * 9;
+	forearm_length = radius * 8.5;
+	segment_radius = radius * 0.48;
+	shoulder_joint_radius = radius;
+	elbow_joint_radius = radius * 0.92;
+	wrist_joint_radius = radius * 0.78;
+	elbow_bend = middle_arm_angle;
+
+	color("yellow") {
+		arm_segment(radius, upper_arm_length, segment_radius, shoulder_joint_radius);
+
+		translate([upper_arm_length, 0, -radius * 0.75]) 
 		linear_extrude(radius * 1.5) 
-			circle(radius);
-			
-		linear_extrude(radius * 2)  
-		translate([radius * 9, 0, 0]) 
-			circle(radius);
+			circle(elbow_joint_radius);
+
+		translate([upper_arm_length, 0, 0]) 
+		rotate([0, 0, elbow_bend]) {
+			arm_segment(radius, forearm_length, segment_radius * 0.94, elbow_joint_radius);
+
+			translate([forearm_length, 0, -radius * 0.7]) 
+			linear_extrude(radius * 1.4) 
+				circle(wrist_joint_radius);
+
+			translate([forearm_length + radius * 0.95, 0, radius * 0.05]) 
+			rotate([0, 88, 180]) 
+				glove(radius);
+		}
 	}
 }
 
@@ -157,6 +180,8 @@ module glove(radius) {
 }
 
 module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
+	shoulder_pivot = [radius * 6, -radius * 4.5, radius * 9.5];
+
 	translate([0, -radius * 4, 0]) 
 	rotate([90, 0, 0]) 
 	    track(radius);
@@ -168,14 +193,9 @@ module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
 	rotate([90, 0, 0]) 
 	    track(radius);
 	
-	color("yellow") 
-	translate([radius * 6, -radius * 4.5, radius * 9.5]) 
+	translate(shoulder_pivot) 
 	rotate([90, base_arm_angle, 0]) 
 	    arm(radius, middle_arm_angle);
-	
-	translate([radius * 10.75, -radius * 4.5, radius / 2.325]) 
-	rotate([0, 70, 180]) 
-	    glove(radius);
 }
 
 module small_caterpillar(radius) {
