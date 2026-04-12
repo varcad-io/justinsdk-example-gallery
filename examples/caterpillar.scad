@@ -180,7 +180,12 @@ module glove(radius) {
 }
 
 module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
-	shoulder_pivot = [radius * 6, -radius * 4.5, radius * 9.5];
+	// Anchor the shoulder directly into the body shell instead of floating the
+	// whole arm assembly above the tracks.
+	shoulder_pivot = [radius * 3.5, -radius * 0.75, radius * 5.75];
+	// The UI slider is expressed as "forward/backward", so map the base angle so
+	// larger values swing the arm back toward the body rather than away from it.
+	effective_base_arm_angle = 180 - base_arm_angle;
 
 	translate([0, -radius * 4, 0]) 
 	rotate([90, 0, 0]) 
@@ -194,7 +199,7 @@ module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
 	    track(radius);
 	
 	translate(shoulder_pivot) 
-	rotate([90, base_arm_angle, 0]) 
+	rotate([90, effective_base_arm_angle, 0]) 
 	    arm(radius, middle_arm_angle);
 }
 
