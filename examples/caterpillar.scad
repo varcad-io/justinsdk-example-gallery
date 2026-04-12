@@ -109,32 +109,25 @@ module arm_segment(radius, length, segment_radius, joint_radius) {
 }
 
 module arm_attachment_transform(radius, middle_arm_angle = 80) {
-	upper_arm_length = radius * 9;
-	forearm_length = radius * 8.5;
-	elbow_bend = middle_arm_angle;
+	upper_arm_length = radius * 5.4;
+	forearm_length = radius * 5.35;
+	elbow_bend = middle_arm_angle - 45;
 
 	translate([upper_arm_length, 0, 0]) 
-	rotate([0, 0, elbow_bend]) 
-	translate([forearm_length + radius * 0.95, 0, radius * 0.05]) 
-	rotate([0, 88, 180]) 
-		children();
-}
-
-module elbow_attachment_transform(radius) {
-	upper_arm_length = radius * 9;
-
-	translate([upper_arm_length, 0, -radius * 0.1]) 
+	rotate([0, -elbow_bend, 0]) 
+	translate([forearm_length + radius * 0.7, 0, radius * 0.05]) 
+	rotate([0, 70, 180]) 
 		children();
 }
 
 module arm(radius, middle_arm_angle = 80) {
-	upper_arm_length = radius * 9;
-	forearm_length = radius * 8.5;
-	segment_radius = radius * 0.48;
-	shoulder_joint_radius = radius;
-	elbow_joint_radius = radius * 0.92;
-	wrist_joint_radius = radius * 0.78;
-	elbow_bend = middle_arm_angle;
+	upper_arm_length = radius * 5.4;
+	forearm_length = radius * 5.35;
+	segment_radius = radius * 0.5;
+	shoulder_joint_radius = radius * 1.02;
+	elbow_joint_radius = radius * 0.9;
+	wrist_joint_radius = radius * 0.76;
+	elbow_bend = middle_arm_angle - 45;
 
 	color("yellow") {
 		arm_segment(radius, upper_arm_length, segment_radius, shoulder_joint_radius);
@@ -144,7 +137,7 @@ module arm(radius, middle_arm_angle = 80) {
 			circle(elbow_joint_radius);
 
 		translate([upper_arm_length, 0, 0]) 
-		rotate([0, 0, elbow_bend]) {
+		rotate([0, -elbow_bend, 0]) {
 			arm_segment(radius, forearm_length, segment_radius * 0.94, elbow_joint_radius);
 
 			translate([forearm_length, 0, -radius * 0.7]) 
@@ -198,13 +191,12 @@ module glove(radius) {
 }
 
 module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
-	// Anchor the shoulder down at the tread assembly so the base arm originates
-	// from the lower running gear instead of floating off the body shell.
-	shoulder_pivot = [radius * 4, -radius * 4.2, radius * 1.5];
-	// The UI slider is expressed as "forward/backward", so map the base angle so
-	// larger values swing the arm back toward the body rather than away from it.
-	effective_base_arm_angle = 180 - base_arm_angle;
-	arm_y_rotation = effective_base_arm_angle - 90;
+	// Match the original showcase composition: the shoulder sits near the top of
+	// the body shell, the hand reaches down toward the ground plane, and the
+	// small caterpillar perches close to the shoulder housing.
+	shoulder_pivot = [radius * 6, -radius * 4.5, radius * 9.5];
+	base_arm_rotation = 90 - base_arm_angle;
+	companion_pivot = [radius * 3.5, -radius * 4.5, radius * 9.75];
 
 	translate([0, -radius * 4, 0]) 
 	rotate([90, 0, 0]) 
@@ -218,14 +210,13 @@ module big_caterpillar(radius, base_arm_angle = 135, middle_arm_angle = 80) {
 	    track(radius);
 	
 	translate(shoulder_pivot) 
-	rotate([270, arm_y_rotation, 0]) {
+	rotate([0, base_arm_rotation, 0]) 
 	    arm(radius, middle_arm_angle);
 
-		elbow_attachment_transform(radius)
-		translate([radius * 0.3, radius * 0.2, radius * 2.3]) 
-		rotate([180, 0, 180]) 
-		small_caterpillar(radius * 0.8);
-	}
+	translate(companion_pivot) 
+	rotate([0, -15, 0]) 
+	scale([0.8, 0.8, 0.8]) 
+	    small_caterpillar(radius);
 }
 
 module small_caterpillar(radius) {
