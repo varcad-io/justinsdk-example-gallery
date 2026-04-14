@@ -93,8 +93,8 @@
     "name": "caterpillar_base_arm_angle_deg",
     "type": "Slider",
     "description": "Rotate the main caterpillar base arm forward or backward",
-    "range": "90,180",
-    "defaultValue": "135",
+    "range": "60,180",
+    "defaultValue": "148",
     "visibleWhen": {
       "field": "example",
       "operator": "equals",
@@ -105,8 +105,8 @@
     "name": "caterpillar_middle_arm_angle_deg",
     "type": "Slider",
     "description": "Change the bend angle for the middle caterpillar arm segment",
-    "range": "30,130",
-    "defaultValue": "80",
+    "range": "0,130",
+    "defaultValue": "90",
     "visibleWhen": {
       "field": "example",
       "operator": "equals",

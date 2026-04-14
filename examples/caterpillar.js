@@ -61,7 +61,7 @@ const createFallbackArmSegment = (radius, length, segmentRadius, jointRadius) =>
       size: [length, segmentRadius * 2.2, radius * 1.15],
     }),
   ),
-  translate([0, 0, 0], cylinder({ height: radius * 1.4, radius: jointRadius, segments: 48 })),
+  rotateY(Math.PI / 2, cylinder({ height: radius * 1.4, radius: jointRadius, segments: 48 })),
 ];
 
 const createFallbackGlove = (radius) => [
@@ -153,13 +153,17 @@ const buildArmAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
     baseArmAngle,
     middleArmAngle,
   });
-  const { shoulderPivot, upperArmLength, forearmLength } = semanticModel;
+  const {
+    shoulderPivot,
+    upperArmLength,
+    forearmLength,
+    baseArmRotation,
+  } = semanticModel;
   const segmentRadius = radius * 0.5;
   const shoulderJointRadius = radius * 1.02;
   const elbowJointRadius = radius * 0.9;
   const wristJointRadius = radius * 0.76;
   const elbowBend = middleArmAngle - 45;
-  const baseArmRotation = 90 - baseArmAngle;
 
   const upperArm = colorizeGeometryList(
     callModule(
@@ -173,9 +177,9 @@ const buildArmAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
 
   const elbowJoint = colorize(
     COLORS.yellow,
-      translate(
-        [upperArmLength, 0, -radius * 0.05],
-        cylinder({ height: radius * 1.45, radius: elbowJointRadius, segments: 40 }),
+    translate(
+      [upperArmLength, 0, -radius * 0.05],
+      rotateY(Math.PI / 2, cylinder({ height: radius * 1.45, radius: elbowJointRadius, segments: 40 })),
     ),
   );
 
@@ -193,7 +197,7 @@ const buildArmAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
       COLORS.yellow,
       translate(
         [forearmLength, 0, -radius * 0.02],
-        cylinder({ height: radius * 1.4, radius: wristJointRadius, segments: 40 }),
+        rotateY(Math.PI / 2, cylinder({ height: radius * 1.4, radius: wristJointRadius, segments: 40 })),
       ),
     ),
   ];
@@ -203,59 +207,64 @@ const buildArmAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
     (geometry) => translate([upperArmLength, 0, 0], rotateY(degreesToRadians(-elbowBend), geometry)),
   );
 
-  const gloveBase = callModule(source, "glove", [radius], () => createFallbackGlove(radius));
-  const glove = colorizeGeometryList(
-    transformGeometryList(
-      gloveBase,
-      (geometry) => translate(
-            [upperArmLength, 0, 0],
-        rotateY(
-          degreesToRadians(-elbowBend),
-          translate(
-            [forearmLength + (radius * 0.7), 0, radius * 0.05],
-            rotateX(Math.PI, rotateY(degreesToRadians(72), scale([0.82, 0.82, 1.06], geometry))),
-          ),
-        ),
+  const gloveLocalTransform = (geometry) => translate(
+    [upperArmLength, 0, 0],
+    rotateY(
+      degreesToRadians(-elbowBend),
+      translate(
+        [forearmLength + (radius * 0.7), 0, radius * 0.05],
+        rotateX(Math.PI, rotateY(degreesToRadians(72), scale([0.82, 0.82, 1.06], geometry))),
       ),
     ),
+  );
+
+  const gloveBase = callModule(source, "glove", [radius], () => createFallbackGlove(radius));
+  const glove = colorizeGeometryList(
+    transformGeometryList(gloveBase, gloveLocalTransform),
     COLORS.white,
   );
 
-  const gloveAccent = [
+  const gloveAccentLocal = [
     translate(
-      [upperArmLength + forearmLength + (radius * 0.05), radius * 0.55, radius * 0.15],
-      cuboid({ size: [radius * 1.35, radius * 0.18, radius * 0.22] }),
+      [radius * 0.12, radius * 0.58, -radius * 0.08],
+      cuboid({ size: [radius * 1.05, radius * 0.18, radius * 0.22] }),
     ),
     translate(
-      [upperArmLength + forearmLength + (radius * 0.05), -radius * 0.55, radius * 0.15],
-      cuboid({ size: [radius * 1.35, radius * 0.18, radius * 0.22] }),
+      [radius * 0.12, -radius * 0.58, -radius * 0.08],
+      cuboid({ size: [radius * 1.05, radius * 0.18, radius * 0.22] }),
     ),
-  ].map((geometry) =>
-    colorize(
-      COLORS.black,
-      translate(
-        [0, 0, 0],
-        rotateY(degreesToRadians(baseArmRotation), geometry),
-      ),
-    ));
+  ];
+  const gloveAccent = colorizeGeometryList(
+    transformGeometryList(gloveAccentLocal, gloveLocalTransform),
+    COLORS.black,
+  );
 
   const localArm = [...upperArm, elbowJoint, ...forearm, ...glove];
   const placedArm = transformGeometryList(
     localArm,
     (geometry) => translate(shoulderPivot, rotateY(degreesToRadians(baseArmRotation), geometry)),
   );
+  const placedAccents = transformGeometryList(
+    gloveAccent,
+    (geometry) => translate(shoulderPivot, rotateY(degreesToRadians(baseArmRotation), geometry)),
+  );
 
-  return [...placedArm, ...gloveAccent.map((geometry) => translate(shoulderPivot, geometry))];
+  return [...placedArm, ...placedAccents];
 };
 
-const buildCompanionAssembly = (source, radius) => {
+const buildCompanionAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
+  const semanticModel = getCaterpillarSemanticModel({
+    radius,
+    baseArmAngle,
+    middleArmAngle,
+  });
   const companion = callModule(source, "small_caterpillar", [radius], () => createFallbackCompanion(radius));
   return colorizeGeometryList(
     transformGeometryList(
       companion,
       (geometry) => translate(
-        [radius * 3.5, -radius * 4.5, radius * 9.75],
-        rotateY(degreesToRadians(-15), scale([0.8, 0.8, 0.8], geometry)),
+        semanticModel.companionPerch,
+        rotateY(degreesToRadians(semanticModel.baseArmRotation - 18), scale([0.8, 0.8, 0.8], geometry)),
       ),
     ),
     COLORS.green,
@@ -276,7 +285,7 @@ export async function main({ variables = {} } = {}) {
     ...buildBodyAssembly(source, radius),
     ...buildTrackAssembly(source, radius, radius * 4),
     ...buildArmAssembly(source, radius, baseArmAngle, middleArmAngle),
-    ...buildCompanionAssembly(source, radius),
+    ...buildCompanionAssembly(source, radius, baseArmAngle, middleArmAngle),
   ];
 
   return parts;
