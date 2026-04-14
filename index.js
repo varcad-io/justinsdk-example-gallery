@@ -2,6 +2,7 @@
 // @ts-nocheck
 import cadRuntime from "@varcad/cad-runtime";
 import * as modeling from "@jscad/modeling";
+import { shouldApplyAccentTint } from "./colorPolicy.js";
 
 const DEFAULT_EXAMPLE = "examples/caterpillar";
 const { rotateX, rotateY, rotateZ, scale, translate } = modeling.transforms;
@@ -386,7 +387,9 @@ const applyGlobalPresentation = (value, variables = {}) => {
   next = rotateGeometryY(next, rotateYDeg);
   next = rotateGeometryZ(next, rotateZDeg);
   next = rotateGeometryZ(next, variables.yaw_deg ?? 0);
-  next = tintGeometry(next, variables.accent_color ?? "#67b3ff");
+  if (shouldApplyAccentTint(value)) {
+    next = tintGeometry(next, variables.accent_color ?? "#67b3ff");
+  }
   return next;
 };
 
