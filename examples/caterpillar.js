@@ -158,6 +158,7 @@ const buildArmAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
     upperArmLength,
     forearmLength,
     baseArmRotation,
+    gloveLateralOffset,
   } = semanticModel;
   const segmentRadius = radius * 0.5;
   const shoulderJointRadius = radius * 1.02;
@@ -212,7 +213,7 @@ const buildArmAssembly = (source, radius, baseArmAngle, middleArmAngle) => {
     rotateY(
       degreesToRadians(-elbowBend),
       translate(
-        [forearmLength + (radius * 0.7), 0, radius * 0.05],
+        [forearmLength + (radius * 0.7), gloveLateralOffset, radius * 0.05],
         rotateX(Math.PI, rotateY(degreesToRadians(72), scale([0.82, 0.82, 1.06], geometry))),
       ),
     ),
@@ -264,7 +265,10 @@ const buildCompanionAssembly = (source, radius, baseArmAngle, middleArmAngle) =>
       companion,
       (geometry) => translate(
         semanticModel.companionPerch,
-        rotateY(degreesToRadians(semanticModel.baseArmRotation - 18), scale([0.8, 0.8, 0.8], geometry)),
+        rotateY(
+          degreesToRadians(semanticModel.baseArmRotation - (middleArmAngle - 45) + 150),
+          scale([0.8, 0.8, 0.8], geometry),
+        ),
       ),
     ),
     COLORS.green,

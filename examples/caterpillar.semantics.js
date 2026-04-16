@@ -31,9 +31,10 @@ const addPoints = (left, right) => left.map((value, index) => value + right[inde
 const scalePoint = (point, factor) => point.map((value) => value * factor);
 
 export const getCaterpillarSemanticModel = ({ radius = 5, baseArmAngle = 135, middleArmAngle = 80 } = {}) => {
-  const shoulderPivot = [radius * 6, -radius * 4.5, radius * 9.5];
-  const upperArmLength = radius * 5.4;
-  const forearmLength = radius * 5.8;
+  const shoulderPivot = [radius * 1.6, -radius * 3.6, radius * 2.4];
+  const upperArmLength = radius * 5.1;
+  const forearmLength = radius * 5.45;
+  const gloveLateralOffset = radius * 1.15;
   const elbowBend = middleArmAngle - 45;
   const baseArmRotation = (baseArmAngle - 90) * 1.4;
 
@@ -41,7 +42,7 @@ export const getCaterpillarSemanticModel = ({ radius = 5, baseArmAngle = 135, mi
   const wristLocal = addPoints(elbowLocal, rotatePointY([forearmLength, 0, 0], -elbowBend));
   const handLocal = addPoints(
     elbowLocal,
-    rotatePointY([forearmLength + (radius * 0.7), 0, radius * 0.05], -elbowBend),
+    rotatePointY([forearmLength + (radius * 0.7), gloveLateralOffset, radius * 0.05], -elbowBend),
   );
   const upperArmMidpointLocal = [upperArmLength * 0.5, 0, 0];
   const upperArmTopNormal = rotatePointY([0, 0, 1], baseArmRotation);
@@ -49,14 +50,15 @@ export const getCaterpillarSemanticModel = ({ radius = 5, baseArmAngle = 135, mi
   const forearmCylinderFaceNormal = [1, 0, 0];
   const wheelFaceNormal = [1, 0, 0];
   const upperArmMidpoint = addPoints(shoulderPivot, rotatePointY(upperArmMidpointLocal, baseArmRotation));
-  const companionPerch = addPoints(
-    upperArmMidpoint,
-    addPoints(
-      scalePoint(upperArmTopNormal, radius * 1.25),
-      rotatePointY([radius * 0.15, 0, 0], baseArmRotation),
-    ),
+  const companionPerchLocal = addPoints(
+    elbowLocal,
+    rotatePointY([forearmLength * 0.76, gloveLateralOffset * 0.82, radius * 0.82], -elbowBend),
   );
-  const gloveAnchorLocal = [forearmLength + (radius * 0.7), 0, radius * 0.05];
+  const companionPerch = addPoints(
+    shoulderPivot,
+    rotatePointY(companionPerchLocal, baseArmRotation),
+  );
+  const gloveAnchorLocal = [forearmLength + (radius * 0.7), gloveLateralOffset, radius * 0.05];
   const transformGloveLocalPoint = (point) =>
     addPoints(
       elbowLocal,
@@ -96,6 +98,7 @@ export const getCaterpillarSemanticModel = ({ radius = 5, baseArmAngle = 135, mi
     gloveAccentRight: addPoints(shoulderPivot, rotatePointY(gloveAccentRightLocal, baseArmRotation)),
     upperArmLength,
     forearmLength,
+    gloveLateralOffset,
     leftTrackCenter: [0, -radius * 4, 0],
     rightTrackCenter: [0, radius * 4, 0],
     bodyCenter: [0, 0, radius * 3],
@@ -272,24 +275,32 @@ export const getCaterpillarConstructionSemantics = (variables = {}) => {
         level: "feature",
         role: "face_feature",
         parent: "face",
+        expectedColor: "black",
+        styleTags: ["black", "readable", "small"],
       }),
       createGroup({
         id: "right_eye",
         level: "feature",
         role: "face_feature",
         parent: "face",
+        expectedColor: "black",
+        styleTags: ["black", "readable", "small"],
       }),
       createGroup({
         id: "left_brow",
         level: "feature",
         role: "face_feature",
         parent: "face",
+        expectedColor: "black",
+        styleTags: ["black", "readable", "small"],
       }),
       createGroup({
         id: "right_brow",
         level: "feature",
         role: "face_feature",
         parent: "face",
+        expectedColor: "black",
+        styleTags: ["black", "readable", "small"],
       }),
       createGroup({
         id: "shoulder_mount",
@@ -357,7 +368,7 @@ export const getCaterpillarConstructionSemantics = (variables = {}) => {
       createAnchor({ id: "upper_arm_midpoint", on: "boom", position: model.upperArmMidpoint, zone: "upper_surface_mid" }),
       createAnchor({ id: "wrist_pivot", on: "stick", position: model.wristPivot, at: "distal_end" }),
       createAnchor({ id: "hand_mount_hint", on: "glove", position: model.handMount, at: "center_mount" }),
-      createAnchor({ id: "companion_perch", on: "boom", position: model.companionPerch, zone: "upper_surface_mid" }),
+      createAnchor({ id: "companion_perch", on: "stick", position: model.companionPerch, zone: "upper_surface_near_glove" }),
     ],
     landmarks: [
       createLandmark({ id: "left_track_center", kind: "part", value: model.leftTrackCenter, on: "left_track" }),
@@ -393,7 +404,7 @@ export const getCaterpillarConstructionSemantics = (variables = {}) => {
       createRelation({ id: "glove_attached", type: "attached_to", child: "glove", parent: "stick" }),
       createRelation({ id: "glove_accent_left_attached", type: "attached_to", child: "glove_accent_left", parent: "glove" }),
       createRelation({ id: "glove_accent_right_attached", type: "attached_to", child: "glove_accent_right", parent: "glove" }),
-      createRelation({ id: "companion_perched", type: "perched_on", child: "companion_bug", parent: "boom", zone: "upper_surface_mid" }),
+      createRelation({ id: "companion_perched", type: "perched_on", child: "companion_bug", parent: "stick", zone: "upper_surface_near_glove" }),
       createRelation({ id: "arm_chain", type: "sequence", items: ["shoulder_pivot", "elbow_pivot", "wrist_pivot", "hand_mount_hint"] }),
       createRelation({ id: "companion_support", type: "support", items: ["companion_perch_hint", "shoulder_pivot"] }),
       createRelation({ id: "glove_accent_pair", type: "paired_features", items: ["glove_accent_left", "glove_accent_right", "hand_mount_hint"] }),
