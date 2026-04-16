@@ -1,7 +1,7 @@
-import cadRuntime from "@varcad/cad-runtime";
+import cadRuntime, { defineConstructionSemantics } from "@varcad/cad-runtime";
 import * as modeling from "@jscad/modeling";
 import {
-  getCaterpillarSemanticLandmarks,
+  getCaterpillarConstructionSemantics,
   getCaterpillarSemanticModel,
 } from "./caterpillar.semantics.js";
 
@@ -270,6 +270,10 @@ const buildCompanionAssembly = (source, radius, baseArmAngle, middleArmAngle) =>
     COLORS.green,
   );
 };
+
+export const getConstructionSemantics = defineConstructionSemantics((builder, variables = {}) => {
+  builder.merge(getCaterpillarConstructionSemantics(variables));
+});
 
 export async function main({ variables = {} } = {}) {
   const source = await cadRuntime.importModule("/examples/caterpillar.scad?use", {
