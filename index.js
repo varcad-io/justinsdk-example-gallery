@@ -4,7 +4,7 @@ import cadRuntime from "@varcad/cad-runtime";
 import * as modeling from "@jscad/modeling";
 import { shouldApplyAccentTint } from "./colorPolicy.js";
 
-const DEFAULT_EXAMPLE = "examples/drilled_cube";
+const DEFAULT_EXAMPLE = "examples/caterpillar";
 const { rotateX, rotateY, rotateZ, scale, translate } = modeling.transforms;
 const { colorize } = modeling.colors;
 
