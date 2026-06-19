@@ -4,7 +4,7 @@ import cadRuntime from "@varcad/cad-runtime";
 import * as modeling from "@jscad/modeling";
 import { shouldApplyAccentTint } from "./colorPolicy.js";
 
-const DEFAULT_EXAMPLE = "examples/caterpillar";
+const DEFAULT_EXAMPLE = "examples/drilled_cube";
 const { rotateX, rotateY, rotateZ, scale, translate } = modeling.transforms;
 const { colorize } = modeling.colors;
 
@@ -12,7 +12,7 @@ const EXAMPLE_PATHS = Object.freeze({
   "examples/bearing_captured_in_mobius_cut": "/examples/bearing_captured_in_mobius_cut.scad",
   "examples/bunny_frame": "/examples/bunny_frame.scad",
   "examples/cat_corner_protector": "/examples/cat_corner_protector.scad",
-  "examples/caterpillar": "/examples/caterpillar.js",
+  "examples/caterpillar": "/examples/caterpillar.scad",
   "examples/chrome_dino": "/examples/chrome_dino.scad",
   "examples/circle_packing/forest": "/examples/circle_packing/forest.scad",
   "examples/circle_packing/packing_circles": "/examples/circle_packing/packing_circles.scad",
