@@ -1,3 +1,5 @@
+[![JustinSDK Example Gallery geometry preview](https://s3.us-east-1.amazonaws.com/varcad.io/repository-previews/17/54/preview-v8/orbit.webp)](https://varcad.io/varcad-io/justinsdk-example-gallery)
+
 # JustinSDK Example Gallery
 
 This repository packages the JustinSDK example set into one varcad.io project.
